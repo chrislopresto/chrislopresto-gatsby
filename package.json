@@ -1,0 +1,23 @@
+{
+  "name": "chrislopresto-gatsby",
+  "description": "Chris LoPresto - Personal Website",
+  "version": "0.0.0",
+  "author": "Chris LoPresto <chris@chrislopresto.com>",
+  "license": "MIT",
+  "scripts": {
+    "develop": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve"
+  },
+  "dependencies": {
+    "gatsby": "next",
+    "gatsby-plugin-typescript": "2.0.0-rc.6",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
+  },
+  "devDependencies": {
+    "@types/react": "^16.4.14",
+    "@types/react-dom": "^16.0.7",
+    "typescript": "^3.0.3"
+  }
+}
