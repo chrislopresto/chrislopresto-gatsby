@@ -2,6 +2,7 @@ import * as React from 'react'
 import { theme } from '../theme/theme';
 import { createGlobalStyle, ThemeProvider } from '../theme/styled-components';
 import { Heading, Text } from 'rebass';
+import 'sanitize.css';
 
 const GlobalStyle = createGlobalStyle`
   body {
