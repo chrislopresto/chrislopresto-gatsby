@@ -10,20 +10,20 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
-    "@types/rebass": "^0.2.23",
-    "gatsby": "^2.0.1",
-    "gatsby-plugin-typescript": "^2.0.0",
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "rebass": "^3.0.0-8",
-    "sanitize.css": "^7.0.3",
-    "styled-components": "^4.0.0-beta.5"
+    "@types/rebass": "^0.3.2",
+    "gatsby": "^2.0.64",
+    "gatsby-plugin-typescript": "^2.0.3",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "rebass": "^3.0.0",
+    "sanitize.css": "^8.0.0",
+    "styled-components": "^4.1.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.1.0",
-    "@types/react": "^16.4.14",
-    "@types/react-dom": "^16.0.7",
-    "@types/styled-components": "^3.0.1",
-    "typescript": "^3.0.3"
+    "@babel/core": "^7.2.0",
+    "@types/react": "^16.7.13",
+    "@types/react-dom": "^16.0.11",
+    "@types/styled-components": "^4.1.2",
+    "typescript": "^3.2.2"
   }
 }
