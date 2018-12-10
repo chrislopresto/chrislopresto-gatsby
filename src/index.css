@@ -1,0 +1,12 @@
+@tailwind preflight;
+@tailwind components;
+
+.Thing {
+  @apply .text-blue;
+
+  @media (min-width: 576px) {
+    @apply .text-green;
+  }
+}
+
+@tailwind utilities;

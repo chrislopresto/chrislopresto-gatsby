@@ -5,7 +5,7 @@ export const colors = {
   light: '#f2f2f0'
 };
 
-const breakpoints = ['31.25em', '43.75em', '46.875em'];
+const breakpoints = ['576px', '768px', '992px', '1200px'];
 const fontSizes = [12, 14, 16, 20, 24, 32, 48, 64];
 const space = [0, 4, 8, 16, 32, 64, 128, 256];
 const fonts = {
