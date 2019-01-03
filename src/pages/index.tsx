@@ -15,18 +15,18 @@ export default () => {
 
         <h2 className='mb-2'>Talks</h2>
         <p className='mb-2'>Here are some conference talks I have given.</p>
-        <p className="mb-4">
-          <Link to='/talks/hot-swapping-our-rails-front-end-in-secret' target='_blank'>
+        <div className="mb-4">
+          <Link to='/presentations/hot-swapping-our-rails-front-end-in-secret' target='_blank'>
             <Text mb={1}>Hot Swapping Our Rails Front End in Secret</Text>
             <RevealJsSlideDeck slug='betterment-rebranding-bonanza' width='300px' height='169px' showControls={false} />
           </Link>
-        </p>
-        <p className="mb-4">
-          <Link to='/talks/living-style-guide-driven-development'>
+        </div>
+        <div className="mb-4">
+          <Link to='/presentations/living-style-guide-driven-development'>
             <Text mb={1}>Living Style Guide Driven Development</Text>
             <RevealJsSlideDeck slug='living-style-guide-driven-development' width='300px' height='169px' showControls={false} />
           </Link>
-        </p>
+        </div>
       </Box>
     </Layout>
   )
