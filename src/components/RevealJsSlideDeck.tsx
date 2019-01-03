@@ -22,7 +22,10 @@ const RevealJsSlideDeck: React.SFC<Props> = (props) => {
   let width = props.width || DEFAULT_WIDTH;
   let height = props.height || DEFAULT_HEIGHT;
   let showControls = props.showControls === false ? 'false' : 'true';
-  let src = `https://s3-us-west-2.amazonaws.com/${props.slug}-index/index.html#/?ph=${height}&pw=${width}&c=${showControls}`
+  let query = new URLSearchParams(location.search)
+  let h = query.get('h') || '0';
+  let src = `https://s3-us-west-2.amazonaws.com/${props.slug}-index/index.html#/?ph=${height}&pw=${width}&c=${showControls}&h=${h}`;
+
   return <Deck src={src} width={width} height={height} />;
 }
 
