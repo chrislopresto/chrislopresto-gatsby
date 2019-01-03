@@ -1,21 +1,13 @@
 import * as React from 'react'
-import { theme } from '../theme/theme';
 import { Link } from "gatsby"
-import { createGlobalStyle, ThemeProvider } from '../theme/styled-components';
 import { Text, Box } from 'rebass';
 import '../index.css';
 import RevealJsSlideDeck from '../components/RevealJsSlideDeck';
-
-const GlobalStyle = createGlobalStyle`
-  body {
-    color: ${theme.colors.primary};
-    font-family: ${theme.fonts.mono};
-  }
-`;
+import Layout from '../components/Layout';
 
 export default () => {
   return (
-    <ThemeProvider theme={theme}>
+    <Layout>
       <Box m={2}>
         <h1 className="mb-2">Hello</h1>
         <p className='mb-2'>My name is Chris LoPresto.</p>
@@ -35,9 +27,7 @@ export default () => {
             <RevealJsSlideDeck slug='living-style-guide-driven-development' width='300px' height='169px' showControls={false} />
           </Link>
         </p>
-
-        <GlobalStyle />
       </Box>
-    </ThemeProvider>
+    </Layout>
   )
 };
