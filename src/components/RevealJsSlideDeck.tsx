@@ -1,4 +1,5 @@
 import * as React from 'react';
+import queryString from 'query-string';
 import styled from '../theme/styled-components';
 
 const DEFAULT_HEIGHT = '100vh';
@@ -22,8 +23,11 @@ const RevealJsSlideDeck: React.SFC<Props> = (props) => {
   let width = props.width || DEFAULT_WIDTH;
   let height = props.height || DEFAULT_HEIGHT;
   let showControls = props.showControls === false ? 'false' : 'true';
-  let query = new URLSearchParams(location.search)
-  let h = query.get('h') || '0';
+  let h = '0';
+  if (typeof window !== 'undefined') {
+    let parsed = queryString.parse(window.location.search);
+    h = parsed['h'];
+  }
   let src = `https://s3-us-west-2.amazonaws.com/${props.slug}-index/index.html#/?ph=${height}&pw=${width}&c=${showControls}&h=${h}`;
 
   return <Deck src={src} width={width} height={height} />;
