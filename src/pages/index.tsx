@@ -4,12 +4,13 @@ import { Text, Box } from 'rebass';
 import '../index.css';
 import RevealJsSlideDeck from '../components/RevealJsSlideDeck';
 import Layout from '../components/Layout';
+import Hero from '../components/Hero';
 
 export default () => {
   return (
     <Layout>
       <Box m={2}>
-        <h1 className="mb-2">Hello</h1>
+        <Hero className='mb-2'>Hello</Hero>
         <p className='mb-2'>My name is Chris LoPresto.</p>
         <p className="mb-8">I'm an engineering leader and a musician.</p>
 
