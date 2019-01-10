@@ -14,9 +14,5 @@ PreCSS run the following plugins (in this order):
 */
 
 module.exports = {
-  plugins: [
-    require('precss'),
-    require('tailwindcss')('./src/tailwind.js'),
-    require('autoprefixer')()
-  ]
-}
+  plugins: [require('precss'), require('tailwindcss')('./src/tailwind.js'), require('autoprefixer')()]
+};
