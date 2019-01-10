@@ -5,6 +5,8 @@
   "author": "Chris LoPresto <chris@chrislopresto.com>",
   "license": "MIT",
   "scripts": {
+    "precommit": "lint-staged",
+    "prettier:write": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss}\"",
     "develop": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve"
@@ -29,9 +31,23 @@
     "autoprefixer": "^9.4.4",
     "babel-plugin-styled-components": "^1.10.0",
     "gatsby-plugin-styled-components": "^3.0.4",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.0",
     "precss": "^4.0.0",
+    "prettier": "^1.15.3",
     "purgecss-webpack-plugin": "^1.4.0",
     "tailwindcss": "^0.7.3",
     "typescript": "^3.2.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx,json,css,scss}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }
