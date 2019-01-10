@@ -5,7 +5,7 @@ import Layout from '../../components/Layout';
 export default () => {
   return (
     <Layout>
-      <RevealJsSlideDeck slug='betterment-rebranding-bonanza' />
+      <RevealJsSlideDeck slug="betterment-rebranding-bonanza" />
     </Layout>
   );
 };

@@ -19,7 +19,7 @@ const Deck = styled.iframe`
   width: ${props => props.width || DEFAULT_WIDTH};
 `;
 
-const RevealJsSlideDeck: React.SFC<Props> = (props) => {
+const RevealJsSlideDeck: React.SFC<Props> = props => {
   let width = props.width || DEFAULT_WIDTH;
   let height = props.height || DEFAULT_HEIGHT;
   let showControls = props.showControls === false ? 'false' : 'true';
@@ -28,9 +28,11 @@ const RevealJsSlideDeck: React.SFC<Props> = (props) => {
     let parsed = queryString.parse(window.location.search);
     h = parsed['h'] || h;
   }
-  let src = `https://s3-us-west-2.amazonaws.com/${props.slug}-index/index.html#/?ph=${height}&pw=${width}&c=${showControls}&h=${h}`;
+  let src = `https://s3-us-west-2.amazonaws.com/${
+    props.slug
+  }-index/index.html#/?ph=${height}&pw=${width}&c=${showControls}&h=${h}`;
 
   return <Deck src={src} width={width} height={height} />;
-}
+};
 
 export default RevealJsSlideDeck;
