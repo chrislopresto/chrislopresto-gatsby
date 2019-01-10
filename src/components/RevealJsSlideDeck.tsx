@@ -1,5 +1,5 @@
 import * as React from 'react';
-import queryString from 'query-string';
+import * as queryString from 'query-string';
 import styled from '../theme/styled-components';
 
 const DEFAULT_HEIGHT = '100vh';
