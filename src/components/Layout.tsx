@@ -2,6 +2,7 @@ import * as React from 'react';
 import * as fonts from '../fonts';
 import { createGlobalStyle, ThemeProvider } from '../theme/styled-components';
 import { theme } from '../theme/theme';
+import SEO from './SEO';
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -22,6 +23,7 @@ const Layout: React.FunctionComponent = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
       <>
+        <SEO />
         {children}
         <GlobalStyle />
       </>

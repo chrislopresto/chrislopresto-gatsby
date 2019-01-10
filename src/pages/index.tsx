@@ -6,14 +6,10 @@ import RevealJsSlideDeck from '../components/RevealJsSlideDeck';
 import Layout from '../components/Layout';
 import Hero from '../components/Hero';
 import { FontObserver } from 'react-with-async-fonts';
-import { Helmet } from 'react-helmet';
 
 export default () => {
   return (
     <FontObserver hero="Marvin Visions Big">
-      <Helmet>
-        <title>Chris LoPresto</title>
-      </Helmet>
       <Layout>
         <Box m={2}>
           <Hero className="mb-2">Hello</Hero>
