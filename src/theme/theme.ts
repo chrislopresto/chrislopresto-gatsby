@@ -1,8 +1,22 @@
-export const colors = {
+interface Colors {
+  primary: string;
+  secondary: string;
+  accent: string;
+  alt: string;
+}
+
+const lightColors: Colors = {
   primary: '#1b3c59',
   secondary: '#456173',
   accent: '#11bfae',
-  light: '#f2f2f0'
+  alt: '#f2f2f0'
+};
+
+const darkColors: Colors = {
+  primary: '#f2f2f0',
+  secondary: '#456173',
+  accent: '#11bfae',
+  alt: '#1b3c59'
 };
 
 const breakpoints = ['576px', '768px', '992px', '1200px'];
@@ -23,15 +37,23 @@ interface Theme {
   fontSizes: number[];
   fonts: { sans: string; mono: string; hero: string };
   space: number[];
-  colors: { [key in keyof typeof colors]: string };
+  colors: Colors;
 }
 
-const theme: Theme = {
+const lightTheme: Theme = {
   breakpoints,
   fontSizes,
   fonts,
   space,
-  colors
+  colors: lightColors
 };
 
-export { theme, Theme };
+const darkTheme: Theme = {
+  breakpoints,
+  fontSizes,
+  fonts,
+  space,
+  colors: darkColors
+};
+
+export { lightTheme, darkTheme, Theme };
