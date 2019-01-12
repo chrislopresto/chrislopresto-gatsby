@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as fonts from '../fonts';
 import { createGlobalStyle, ThemeProvider } from '../theme/styled-components';
-import { theme } from '../theme/theme';
+import { darkTheme, lightTheme } from '../theme/theme';
 import SEO from './SEO';
 
 const GlobalStyle = createGlobalStyle`
@@ -13,15 +13,20 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    color: ${theme.colors.primary};
-    font-family: ${theme.fonts.mono};
+    background-color: ${props => props.theme.colors.alt};
+    color: ${props => props.theme.colors.primary};
+    font-family: ${props => props.theme.fonts.mono};
     margin: 0;
+  }
+
+  a:visited {
+    color: ${props => props.theme.colors.accent};
   }
 `;
 
 const Layout: React.FunctionComponent = ({ children }) => {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={darkTheme}>
       <>
         <SEO />
         {children}
