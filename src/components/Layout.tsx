@@ -19,8 +19,14 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
 
-  a:visited {
+  a {
     color: ${props => props.theme.colors.accent};
+  }
+
+  a:active,
+  a:hover,
+  a:focus {
+    color: ${props => props.theme.colors.primary};
   }
 `;
 
