@@ -40,7 +40,7 @@ interface Theme {
   colors: Colors;
 }
 
-const lightTheme: Theme = {
+const light: Theme = {
   breakpoints,
   fontSizes,
   fonts,
@@ -48,12 +48,11 @@ const lightTheme: Theme = {
   colors: lightColors
 };
 
-const darkTheme: Theme = {
-  breakpoints,
-  fontSizes,
-  fonts,
-  space,
+const dark: Theme = {
+  ...light,
   colors: darkColors
 };
 
-export { lightTheme, darkTheme, Theme };
+const themes = { light, dark };
+
+export { themes, Theme };
