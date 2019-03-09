@@ -1,12 +1,11 @@
 import * as React from 'react';
-import { FunctionComponent } from 'react';
 import { ThemeProvider } from '../theme/styled-components';
 import BaseStyles from './BaseStyles';
 import { themes } from '../theme/theme';
 import { SiteModeProvider, useSiteMode } from '../theme/SiteModeContext';
 import SEO from './SEO';
 
-const Content: FunctionComponent = ({ children }) => {
+const Content: React.FC = ({ children }) => {
   const [siteModeContext] = useSiteMode();
 
   return (
@@ -20,9 +19,9 @@ const Content: FunctionComponent = ({ children }) => {
   );
 };
 
-const Layout: FunctionComponent = ({ children }) => {
+const Layout: React.FC = ({ children }) => {
   return (
-    <SiteModeProvider mode="light">
+    <SiteModeProvider mode="dark">
       <Content>{children}</Content>
     </SiteModeProvider>
   );
