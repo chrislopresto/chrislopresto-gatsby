@@ -2,22 +2,15 @@ import * as React from 'react';
 import { FunctionComponent } from 'react';
 import { ThemeProvider } from '../theme/styled-components';
 import BaseStyles from './BaseStyles';
-import { darkTheme, lightTheme } from '../theme/theme';
-import { SiteModeProvider, Mode, useSiteMode } from '../theme/SiteModeContext';
+import { themes } from '../theme/theme';
+import { SiteModeProvider, useSiteMode } from '../theme/SiteModeContext';
 import SEO from './SEO';
-
-interface State {
-  mode: Mode;
-}
-
-const initialState: State = {
-  mode: 'dark'
-};
 
 const Content: FunctionComponent = ({ children }) => {
   const [siteModeContext] = useSiteMode();
+
   return (
-    <ThemeProvider theme={siteModeContext.mode === 'dark' ? darkTheme : lightTheme}>
+    <ThemeProvider theme={themes[siteModeContext.mode]}>
       <>
         <SEO />
         {children}
@@ -29,7 +22,7 @@ const Content: FunctionComponent = ({ children }) => {
 
 const Layout: FunctionComponent = ({ children }) => {
   return (
-    <SiteModeProvider initialState={initialState}>
+    <SiteModeProvider mode="light">
       <Content>{children}</Content>
     </SiteModeProvider>
   );

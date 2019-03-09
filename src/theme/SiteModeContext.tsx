@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { createContext, useContext, useReducer, FunctionComponent, Reducer, Dispatch } from 'react';
 import produce from 'immer';
+import { themes } from '../theme/theme';
 
-export type Mode = 'light' | 'dark';
+type Mode = keyof typeof themes;
 
 interface State {
   mode: Mode;
@@ -13,10 +14,12 @@ interface Action {
 }
 
 interface ProviderProps {
-  initialState: State;
+  mode: Mode;
 }
 
-export const SiteModeContext = createContext<[State, Dispatch<Action>]>({} as [State, Dispatch<Action>]);
+type ContextValue = [State, Dispatch<Action>];
+
+const SiteModeContext = createContext<ContextValue>({} as ContextValue);
 
 const reducer: Reducer<State, Action> = (state, action) =>
   produce(state, draft => {
@@ -26,8 +29,8 @@ const reducer: Reducer<State, Action> = (state, action) =>
     }
   });
 
-export const SiteModeProvider: FunctionComponent<ProviderProps> = ({ initialState, children }) => (
-  <SiteModeContext.Provider value={useReducer(reducer, initialState)}>{children}</SiteModeContext.Provider>
+export const SiteModeProvider: FunctionComponent<ProviderProps> = ({ mode, children }) => (
+  <SiteModeContext.Provider value={useReducer(reducer, { mode })}>{children}</SiteModeContext.Provider>
 );
 
 export const useSiteMode = () => useContext(SiteModeContext);
