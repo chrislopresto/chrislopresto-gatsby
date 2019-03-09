@@ -13,8 +13,8 @@
   },
   "dependencies": {
     "query-string": "^6.2.0",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
     "react-helmet": "^5.2.0",
     "react-with-async-fonts": "^4.0.3",
     "rebass": "^3.0.0",
@@ -23,8 +23,8 @@
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@types/query-string": "^6.2.0",
-    "@types/react": "^16.7.18",
-    "@types/react-dom": "^16.0.11",
+    "@types/react": "^16.8.7",
+    "@types/react-dom": "^16.8.2",
     "@types/react-helmet": "^5.0.8",
     "@types/rebass": "^0.3.3",
     "@types/styled-components": "^4.1.5",
