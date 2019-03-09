@@ -9,7 +9,8 @@
     "prettier:write": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss}\"",
     "develop": "gatsby develop",
     "build": "gatsby build",
-    "serve": "gatsby serve"
+    "serve": "gatsby serve",
+    "test": "jest"
   },
   "dependencies": {
     "immer": "^2.1.1",
@@ -23,6 +24,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
+    "@types/jest": "^24.0.11",
     "@types/query-string": "^6.2.0",
     "@types/react": "^16.8.7",
     "@types/react-dom": "^16.8.2",
@@ -30,18 +32,23 @@
     "@types/rebass": "^0.3.3",
     "@types/styled-components": "^4.1.5",
     "autoprefixer": "^9.4.4",
+    "babel-jest": "^24.3.1",
     "babel-plugin-styled-components": "^1.10.0",
+    "babel-preset-gatsby": "^0.1.8",
     "gatsby": "^2.0.90",
     "gatsby-plugin-postcss": "^2.0.2",
     "gatsby-plugin-react-helmet": "^3.0.5",
     "gatsby-plugin-styled-components": "^3.0.4",
     "gatsby-plugin-typescript": "^2.0.3",
     "husky": "^1.3.1",
+    "jest": "^24.3.1",
+    "jest-dom": "^3.1.2",
     "lint-staged": "^8.1.0",
     "precss": "^4.0.0",
     "prettier": "^1.15.3",
     "purgecss-webpack-plugin": "^1.4.0",
     "tailwindcss": "^0.7.3",
+    "ts-jest": "^24.0.0",
     "typescript": "^3.2.2"
   },
   "husky": {
