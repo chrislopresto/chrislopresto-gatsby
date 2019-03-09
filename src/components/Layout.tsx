@@ -1,55 +1,38 @@
 import * as React from 'react';
+import { FunctionComponent } from 'react';
 import { ThemeProvider } from '../theme/styled-components';
 import BaseStyles from './BaseStyles';
 import { darkTheme, lightTheme } from '../theme/theme';
-import { SiteModeContextConsumer, SiteModeContextProvider, SiteMode } from '../theme/SiteModeContext';
+import { SiteModeProvider, Mode, useSiteMode } from '../theme/SiteModeContext';
 import SEO from './SEO';
 
 interface State {
-  theme: 'light' | 'dark';
-  setTheme: () => void;
+  mode: Mode;
 }
 
-export default class Layout extends React.Component<{}, State> {
-  constructor(props: {}) {
-    super(props);
+const initialState: State = {
+  mode: 'light'
+};
 
-    this.state = {
-      theme: 'dark',
-      setTheme: this.setTheme
-    };
-  }
+const Content: FunctionComponent = ({ children }) => {
+  const [siteModeContext] = useSiteMode();
+  return (
+    <ThemeProvider theme={siteModeContext.mode === 'dark' ? darkTheme : lightTheme}>
+      <>
+        <SEO />
+        {children}
+        <BaseStyles />
+      </>
+    </ThemeProvider>
+  );
+};
 
-  setTheme = () => {
-    this.setState({
-      theme: this.state.theme === 'light' ? 'dark' : 'light'
-    });
-  };
+const Layout: FunctionComponent = ({ children }) => {
+  return (
+    <SiteModeProvider initialState={initialState}>
+      <Content>{children}</Content>
+    </SiteModeProvider>
+  );
+};
 
-  render() {
-    const defaultSiteMode: SiteMode = {
-      theme: 'dark',
-      setTheme: this.setTheme
-    };
-
-    return (
-      <SiteModeContextProvider value={this.state}>
-        <SiteModeContextConsumer>
-          {siteModeContext => {
-            let theme = siteModeContext!.theme === 'light' ? lightTheme : darkTheme;
-
-            return (
-              <ThemeProvider theme={theme}>
-                <>
-                  <SEO />
-                  {this.props.children}
-                  <BaseStyles />
-                </>
-              </ThemeProvider>
-            );
-          }}
-        </SiteModeContextConsumer>
-      </SiteModeContextProvider>
-    );
-  }
-}
+export default Layout;
