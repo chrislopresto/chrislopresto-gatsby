@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { createContext, useContext, useReducer, FunctionComponent, Reducer, Dispatch } from 'react';
+import produce from 'immer';
 
 export type Mode = 'light' | 'dark';
 
@@ -7,30 +8,25 @@ interface State {
   mode: Mode;
 }
 
-export const SiteModeContext = createContext<[State, Dispatch<Action>]>({} as [State, Dispatch<Action>]);
-
 interface Action {
   type: 'toggleMode';
 }
 
-interface SiteModeProviderProps {
+interface ProviderProps {
   initialState: State;
 }
 
-const reducer: Reducer<State, Action> = (state, action) => {
-  switch (action.type) {
-    case 'toggleMode':
-      return {
-        ...state,
-        mode: state.mode === 'light' ? 'dark' : 'light'
-      };
+export const SiteModeContext = createContext<[State, Dispatch<Action>]>({} as [State, Dispatch<Action>]);
 
-    default:
-      return state;
-  }
-};
+const reducer: Reducer<State, Action> = (state, action) =>
+  produce(state, draft => {
+    switch (action.type) {
+      case 'toggleMode':
+        draft.mode = state.mode === 'light' ? 'dark' : 'light';
+    }
+  });
 
-export const SiteModeProvider: FunctionComponent<SiteModeProviderProps> = ({ initialState, children }) => (
+export const SiteModeProvider: FunctionComponent<ProviderProps> = ({ initialState, children }) => (
   <SiteModeContext.Provider value={useReducer(reducer, initialState)}>{children}</SiteModeContext.Provider>
 );
 

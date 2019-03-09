@@ -11,7 +11,7 @@ interface State {
 }
 
 const initialState: State = {
-  mode: 'light'
+  mode: 'dark'
 };
 
 const Content: FunctionComponent = ({ children }) => {
