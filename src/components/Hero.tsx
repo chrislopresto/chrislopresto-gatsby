@@ -1,16 +1,18 @@
 import * as React from 'react';
 import styled from '../theme/styled-components';
 import { withFonts } from 'react-with-async-fonts';
-import { SiteMode, SiteModeContextConsumer, withSiteModeContext } from '../theme/SiteModeContext';
+import { useSiteMode } from '../theme/SiteModeContext';
 
 interface Props {
   className: string;
-  siteModeContext: SiteMode;
 }
 
-const Hero: React.FC<Props> = ({ className, siteModeContext, children }) => {
+const Hero: React.FC<Props> = ({ className, children }) => {
+  const [, dispatch] = useSiteMode();
+  const toggleMode = () => dispatch({ type: 'toggleMode' });
+
   return (
-    <h1 className={className} onClick={siteModeContext.setTheme}>
+    <h1 className={className} onClick={toggleMode}>
       {children}
     </h1>
   );
@@ -24,4 +26,4 @@ const StyledHero = styled(Hero)`
   color: ${props => props.theme.colors.accent};
 `;
 
-export default withFonts(withSiteModeContext(StyledHero));
+export default withFonts(StyledHero);
