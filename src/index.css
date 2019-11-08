@@ -1,11 +1,19 @@
-@tailwind preflight;
+@tailwind base;
+
+html {
+  line-height: 1.15;
+}
+h2 {
+  @apply text-2xl font-bold;
+}
+
 @tailwind components;
 
 .Thing {
-  @apply .text-blue;
+  @apply .text-blue-500;
 
   @media (min-width: 576px) {
-    @apply .text-green;
+    @apply .text-green-500;
   }
 }
 
