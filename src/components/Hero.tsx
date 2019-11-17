@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { FontSubscriber } from 'react-with-async-fonts';
-import { useSiteMode } from '../theme/SiteModeContext';
+import { useSiteModeDispatch } from '../theme/SiteModeContext';
 import styled from '../theme/styled-components';
 
 interface Props {
@@ -19,7 +19,7 @@ const StyledHeader = styled.h1`
 `;
 
 const Hero = ({ className, children }: Props) => {
-  const [, dispatch] = useSiteMode();
+  const dispatch = useSiteModeDispatch();
   const toggleMode = () => dispatch({ type: 'toggleMode' });
 
   return (
