@@ -3,7 +3,19 @@ module.exports = {
     'gatsby-plugin-postcss',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-typescript',
-    'gatsby-plugin-react-helmet'
+    'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-plugin-eslint',
+      options: {
+        test: /\.ts$|\.tsx$/,
+        exclude: /(node_modules|.cache|public)/,
+        stages: ['develop'],
+        options: {
+          emitWarning: true,
+          failOnError: false
+        }
+      }
+    }
   ],
   siteMetadata: {
     title: 'Hello',
