@@ -27,10 +27,6 @@ const fonts = {
   mono: 'Menlo, monospace',
   hero: 'Marvin Visions Big, sans-serif'
 };
-const shadows = {
-  small: '0 0 4px rgba(0, 0, 0, .125)',
-  large: '0 0 24px rgba(0, 0, 0, .125)'
-};
 
 interface Theme {
   breakpoints: string[];
