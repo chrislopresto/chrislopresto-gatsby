@@ -15,6 +15,7 @@ const StyledHeader = styled.h1`
   text-transform: uppercase;
   color: ${props => props.theme.colors.accent};
   cursor: pointer;
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
 `;
 
 const Hero = ({ className, children }: Props) => {
