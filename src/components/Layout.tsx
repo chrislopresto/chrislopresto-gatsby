@@ -1,11 +1,11 @@
-import * as React from 'react';
+import React, { ReactNode } from 'react';
 import { ThemeProvider } from '../theme/styled-components';
 import BaseStyles from './BaseStyles';
 import { themes } from '../theme/theme';
 import { SiteModeProvider, useSiteModeState } from '../theme/SiteModeContext';
 import SEO from './SEO';
 
-const Content: React.FC = ({ children }) => {
+const Content = ({ children }: { children: ReactNode }) => {
   const siteModeState = useSiteModeState();
 
   return (
@@ -19,7 +19,7 @@ const Content: React.FC = ({ children }) => {
   );
 };
 
-const Layout: React.FC = ({ children }) => {
+const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <SiteModeProvider mode="dark">
       <Content>{children}</Content>

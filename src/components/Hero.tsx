@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { FontSubscriber } from 'react-with-async-fonts';
 import { useSiteModeDispatch } from '../theme/SiteModeContext';
 import styled from '../theme/styled-components';

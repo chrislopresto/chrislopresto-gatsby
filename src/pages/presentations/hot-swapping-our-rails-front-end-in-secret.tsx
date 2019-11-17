@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import RevealJsSlideDeck from '../../components/RevealJsSlideDeck';
 import Layout from '../../components/Layout';
 import SEO from '../../components/SEO';

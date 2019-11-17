@@ -3,7 +3,9 @@
     "jsx": "react",
     "skipLibCheck": true,
     "strict": true,
-    "typeRoots": ["node_modules/@types", "@types"]
+    "typeRoots": ["node_modules/@types", "@types"],
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
   },
   "include": ["./src/**/*", "./@types/**/*"]
 }
