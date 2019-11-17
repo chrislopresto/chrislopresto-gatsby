@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { createContext, useContext, useReducer, Dispatch } from 'react';
 import { reducer, State, Action, Mode } from './site-mode-reducer';
 

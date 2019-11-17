@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import * as queryString from 'query-string';
 import styled from '../theme/styled-components';
 

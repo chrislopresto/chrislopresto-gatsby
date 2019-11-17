@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 
 declare module 'rebass' {
   export interface BaseProps<C> extends React.Props<C> {
