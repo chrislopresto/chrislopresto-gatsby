@@ -2,14 +2,14 @@ import * as React from 'react';
 import { ThemeProvider } from '../theme/styled-components';
 import BaseStyles from './BaseStyles';
 import { themes } from '../theme/theme';
-import { SiteModeProvider, useSiteMode } from '../theme/SiteModeContext';
+import { SiteModeProvider, useSiteModeState } from '../theme/SiteModeContext';
 import SEO from './SEO';
 
 const Content: React.FC = ({ children }) => {
-  const [siteModeContext] = useSiteMode();
+  const siteModeState = useSiteModeState();
 
   return (
-    <ThemeProvider theme={themes[siteModeContext.mode]}>
+    <ThemeProvider theme={themes[siteModeState.mode]}>
       <>
         <SEO />
         {children}
