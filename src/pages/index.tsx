@@ -6,13 +6,21 @@ import RevealJsSlideDeck from '../components/RevealJsSlideDeck';
 import Layout from '../components/Layout';
 import Hero from '../components/Hero';
 import { FontObserver } from 'react-with-async-fonts';
+import styled from 'styled-components';
+
+const LowCap = styled.span`
+  font-size: ${props => props.theme.fontSizes[8] * 0.68}px;
+`;
 
 export default () => {
   return (
+    // @ts-ignore incorrect FontObserver children types
     <FontObserver hero="Marvin Visions Big">
       <Layout>
         <Box m={2}>
-          <Hero className="mb-2">Hello</Hero>
+          <Hero className="mb-2">
+            Chris L<LowCap>o</LowCap>Presto
+          </Hero>
           <p className="mb-2">My name is Chris LoPresto.</p>
           <p className="mb-8">I'm an engineering leader and a musician.</p>
 
