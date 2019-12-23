@@ -6,6 +6,9 @@ html {
 h2 {
   @apply text-2xl font-bold;
 }
+.hero {
+  line-height: 0.85;
+}
 
 @tailwind components;
 
