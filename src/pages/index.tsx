@@ -11,7 +11,7 @@ export default () => {
     <Layout>
       <SEO title="Chris LoPresto | Engineering leader. Musician." />
       <div className="p-3 md:p-5 bg-alt text-primary font-mono">
-        <section className="mb-8 max-w-3xl">
+        <section className="mb-10 max-w-3xl">
           <Hero />
           <p className="text-sm">
             Engineering leader with deep front end expertise. Experience building teams and inspiring change.
@@ -19,8 +19,8 @@ export default () => {
           </p>
         </section>
 
-        <section className="mb-8 max-w-3xl">
-          <h2 className="mb-2">Music Bio</h2>
+        <section className="mb-10 max-w-3xl">
+          <h2 className="mb-2">Bio</h2>
           <p className="mb-2">
             Chris LoPresto grew up as an oldest child in Delaware, the oldest state. He picked up degrees in Jazz
             Performance (piano) and Computer Science at Exit 9 of the NJ Turnpike before continuing on up to New York
@@ -55,7 +55,7 @@ export default () => {
           </p>
         </section>
 
-        <section className="mb-8">
+        <section className="mb-10">
           <h2 className="mb-2">Talks</h2>
           <p className="mb-2">Here are some conference talks I have given.</p>
           <div className="mb-6">

@@ -40,7 +40,27 @@ h2 {
 
 @tailwind utilities;
 
-@import './theme.css';
+.mode-light .text-primary { @apply text-light-primary; }
+.mode-light .text-secondary { @apply text-light-secondary; }
+.mode-light .text-accent { @apply text-light-accent; }
+.mode-light .text-alt { @apply text-light-alt; }
+.mode-light .bg-primary { @apply bg-light-primary; }
+.mode-light .bg-secondary { @apply bg-light-secondary; }
+.mode-light .bg-accent { @apply bg-light-accent; }
+.mode-light .bg-alt { @apply bg-light-alt; }
+.mode-light a { @apply text-light-accent; }
+.mode-light a:active, .mode-light a:hover, .mode-light a:focus { @apply text-light-primary; }
+
+.mode-dark .text-primary { @apply text-dark-primary; }
+.mode-dark .text-secondary { @apply text-dark-secondary; }
+.mode-dark .text-accent { @apply text-dark-accent; }
+.mode-dark .text-alt { @apply text-dark-alt; }
+.mode-dark .bg-primary { @apply bg-dark-primary; }
+.mode-dark .bg-secondary { @apply bg-dark-secondary; }
+.mode-dark .bg-accent { @apply bg-dark-accent; }
+.mode-dark .bg-alt { @apply bg-dark-alt; }
+.mode-dark a { @apply text-dark-accent; }
+.mode-dark a:active, .mode-dark a:hover, .mode-dark a:focus { @apply text-dark-primary; }
 
 /* .mode-light {
   --color-primary: var(--light--color-primary);
