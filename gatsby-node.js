@@ -8,7 +8,7 @@ const PATHS = {
 };
 
 const purgeCssConfig = {
-  paths: glob.sync(`${PATHS.src}/**/*.tsx`, { nodir: true }),
+  paths: glob.sync(`${PATHS.src}/**/*.{tsx,css}`, { nodir: true }),
   extractors: [
     {
       // Custom extractor to allow special characters (like ":") in class names
@@ -18,11 +18,11 @@ const purgeCssConfig = {
           return content.match(/[A-Za-z0-9-_:/]+/g) || [];
         }
       },
-      extensions: [`tsx`]
+      extensions: [`tsx`, `css`]
     }
   ],
-  whitelist: [],
-  whitelistPatterns: [/\-primary/, /\-secondary/, /\-accent/, /\-alt/]
+  whitelist: ['mode-dark', 'mode-light'],
+  whitelistPatterns: [/body/, /html/]
 };
 
 exports.onCreateWebpackConfig = ({ actions, stage }) => {

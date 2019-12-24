@@ -17,14 +17,13 @@
   src: local('Marvin Visions Big'), url('./fonts/MarvinVisionsBig-Bold.woff2') format('woff2');
 }
 
-.foo {
-  border: 2px dashed lime;
-}
-
 @tailwind base;
 
 html {
   line-height: 1.15;
+}
+body {
+  margin: 0;
 }
 h2 {
   @apply text-2xl font-bold;
