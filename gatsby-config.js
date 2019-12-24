@@ -1,15 +1,7 @@
 module.exports = {
   plugins: [
     'gatsby-plugin-postcss',
-    'gatsby-plugin-styled-components',
-    {
-      resolve: 'gatsby-plugin-typescript',
-      options: {
-        isTsx: true,
-        jsxPragma: 'jsx',
-        allExtensions: true
-      }
-    },
+    'gatsby-plugin-typescript',
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-eslint',

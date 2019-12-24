@@ -6,6 +6,6 @@ import SEO from '../../components/SEO';
 export default () => (
   <Layout>
     <SEO title="Living Style Guide Driven Development" />
-    <RevealJsSlideDeck slug="living-style-guide-driven-development" />
+    <RevealJsSlideDeck title="living-style-guide-driven-development" slug="living-style-guide-driven-development" />
   </Layout>
 );

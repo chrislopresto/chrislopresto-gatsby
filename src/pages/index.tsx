@@ -1,33 +1,26 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import styled from 'styled-components';
 import Hero from '../components/Hero';
 import Layout from '../components/Layout';
 import RevealJsSlideDeck from '../components/RevealJsSlideDeck';
-import '../index.css';
 import SEO from '../components/SEO';
-
-const LowCap = styled.span`
-  font-size: ${props => props.theme.fontSizes[8] * 0.68}px;
-`;
+import '../index.css';
 
 export default () => {
   return (
     <Layout>
       <SEO title="Chris LoPresto | Engineering leader. Musician." />
-      <div className="p-3 md:p-5">
-        <section className="mb-10 max-w-3xl">
-          <Hero className="mb-4 hero">
-            Chris L<LowCap>o</LowCap>Presto
-          </Hero>
+      <div className="p-3 md:p-5 bg-alt text-primary font-mono">
+        <section className="mb-8 max-w-3xl">
+          <Hero />
           <p className="text-sm">
             Engineering leader with deep front end expertise. Experience building teams and inspiring change.
             Professional musician.
           </p>
         </section>
 
-        <section className="mb-10 max-w-3xl">
-          <h2 className="mb-2">Bio</h2>
+        <section className="mb-8 max-w-3xl">
+          <h2 className="mb-2">Music Bio</h2>
           <p className="mb-2">
             Chris LoPresto grew up as an oldest child in Delaware, the oldest state. He picked up degrees in Jazz
             Performance (piano) and Computer Science at Exit 9 of the NJ Turnpike before continuing on up to New York
@@ -70,6 +63,7 @@ export default () => {
               <p>Hot Swapping Our Rails Front End in Secret</p>
               <p className="mb-2 text-xs font-bold">EmberConf 2016</p>
               <RevealJsSlideDeck
+                title="betterment-rebranding-bonanza"
                 slug="betterment-rebranding-bonanza"
                 width="300px"
                 height="169px"
@@ -82,6 +76,7 @@ export default () => {
               <p>Living Style Guide Driven Development</p>
               <p className="mb-2 text-xs font-bold">RailsConf 2018</p>
               <RevealJsSlideDeck
+                title="living-style-guide-driven-development"
                 slug="living-style-guide-driven-development"
                 width="300px"
                 height="169px"

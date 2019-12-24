@@ -1,9 +1,6 @@
 import React, { ReactNode } from 'react';
 import { FontObserver } from 'react-with-async-fonts';
 import { SiteModeProvider, useSiteModeState } from '../theme/SiteModeContext';
-import { ThemeProvider } from '../theme/styled-components';
-import { themes } from '../theme/theme';
-import BaseStyles from './BaseStyles';
 import SEO from './SEO';
 
 const Content = ({ children }: { children: ReactNode }) => {
@@ -12,13 +9,10 @@ const Content = ({ children }: { children: ReactNode }) => {
   return (
     // @ts-ignore incorrect FontObserver children types
     <FontObserver hero="Marvin Visions Big">
-      <ThemeProvider theme={themes[siteModeState.mode]}>
-        <>
-          <SEO />
-          {children}
-          <BaseStyles />
-        </>
-      </ThemeProvider>
+      <div className={`mode-${siteModeState.mode}`}>
+        <SEO />
+        {children}
+      </div>
     </FontObserver>
   );
 };

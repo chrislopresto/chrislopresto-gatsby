@@ -6,6 +6,6 @@ import SEO from '../../components/SEO';
 export default () => (
   <Layout>
     <SEO title="Hot Swapping Our Rails Front End In Secret - A Rebrand Story" />
-    <RevealJsSlideDeck slug="betterment-rebranding-bonanza" />
+    <RevealJsSlideDeck title="betterment-rebranding-bonanza" slug="betterment-rebranding-bonanza" />
   </Layout>
 );
