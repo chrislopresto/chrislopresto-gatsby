@@ -21,8 +21,8 @@ const purgeCssConfig = {
       extensions: [`tsx`]
     }
   ],
-  whitelist: [`class-to-whitelist`], // adjust for each project
-  whitelistPatterns: [/body/, /headroom/, /ReactModal/, /ril/] // adjust for each project
+  whitelist: [],
+  whitelistPatterns: [/\-primary/, /\-secondary/, /\-accent/, /\-alt/]
 };
 
 exports.onCreateWebpackConfig = ({ actions, stage }) => {
