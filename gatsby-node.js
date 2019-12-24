@@ -22,7 +22,7 @@ const purgeCssConfig = {
     }
   ],
   whitelist: ['mode-dark', 'mode-light'],
-  whitelistPatterns: [/body/, /html/]
+  whitelistPatterns: [/body/, /html/, /\-primary/, /\-secondary/, /\-accent/, /\-alt/]
 };
 
 exports.onCreateWebpackConfig = ({ actions, stage }) => {

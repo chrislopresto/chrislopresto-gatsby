@@ -10,7 +10,7 @@ export default () => {
   return (
     <Layout>
       <SEO title="Chris LoPresto | Engineering leader. Musician." />
-      <div className="p-3 md:p-5 bg-alt text-primary font-mono">
+      <div className="p-3 md:p-5 text-primary font-mono">
         <section className="mb-10 max-w-3xl">
           <Hero />
           <p className="text-sm">
