@@ -31,7 +31,11 @@ const SEO = ({ title, description, image, pathname, article }: Props) => {
 
         return (
           <>
-            <Helmet title={seo.title} titleTemplate={titleTemplate} bodyAttributes={{ class: `mode-${mode}` }}>
+            <Helmet
+              title={seo.title}
+              titleTemplate={titleTemplate}
+              bodyAttributes={{ class: `mode-${mode} bg-${mode}-alt` }}
+            >
               <meta name="description" content={seo.description} />
               <meta name="image" content={seo.image} />
               {seo.url && <meta property="og:url" content={seo.url} />}
