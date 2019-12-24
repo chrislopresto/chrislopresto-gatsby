@@ -1,23 +1,16 @@
 import React from 'react';
 import * as queryString from 'query-string';
-import styled from '../theme/styled-components';
 
 const DEFAULT_HEIGHT = '100vh';
 const DEFAULT_WIDTH = '100vw';
 
 interface Props {
+  title: string;
   height?: string;
   width?: string;
   showControls?: boolean;
   slug: 'living-style-guide-driven-development' | 'betterment-rebranding-bonanza';
 }
-
-const Deck = styled.iframe`
-  display: block;
-  border: none;
-  height: ${props => props.height || DEFAULT_HEIGHT};
-  width: ${props => props.width || DEFAULT_WIDTH};
-`;
 
 const RevealJsSlideDeck: React.SFC<Props> = props => {
   let width = props.width || DEFAULT_WIDTH;
@@ -29,8 +22,14 @@ const RevealJsSlideDeck: React.SFC<Props> = props => {
     h = (parsed['h'] as string) || h;
   }
   let src = `https://s3-us-west-2.amazonaws.com/${props.slug}-index/index.html#/?ph=${height}&pw=${width}&c=${showControls}&h=${h}`;
+  let style = {
+    height,
+    width
+  };
 
-  return <Deck src={src} width={width} height={height} />;
+  return (
+    <iframe title={props.title} className="block border-0" style={style} src={src} width={width} height={height} />
+  );
 };
 
 export default RevealJsSlideDeck;

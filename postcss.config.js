@@ -1,3 +1,12 @@
 module.exports = {
-  plugins: [require('tailwindcss'), require('autoprefixer')()]
+  plugins: [
+    require('postcss-preset-env')({
+      stage: 3,
+      preserve: true,
+      importFrom: './src/colors.js'
+      // exportTo: './src/colors.css'
+    }),
+    require('tailwindcss'),
+    require('autoprefixer')()
+  ]
 };

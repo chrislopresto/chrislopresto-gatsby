@@ -1,33 +1,21 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { FontSubscriber } from 'react-with-async-fonts';
 import { useSiteModeDispatch } from '../theme/SiteModeContext';
-import styled from '../theme/styled-components';
 
 interface Props {
-  className: string;
-  children: React.ReactNode;
+  className?: string;
 }
 
-const StyledHeader = styled.h1`
-  font-family: ${props => (props.theme.fonts.hero ? props.theme.fonts.hero : props.theme.fonts.sans)};
-  font-size: ${props => props.theme.fontSizes[8]}px;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: ${props => props.theme.colors.accent};
-  cursor: pointer;
-  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
-`;
-
-const Hero = ({ className, children }: Props) => {
+const Hero = ({ className }: Props) => {
   const dispatch = useSiteModeDispatch();
-  const toggleMode = () => dispatch({ type: 'toggleMode' });
+  const toggleMode = useCallback(() => dispatch({ type: 'toggleMode' }), [dispatch]);
 
   return (
     <FontSubscriber>
       {() => (
-        <StyledHeader className={className} onClick={toggleMode}>
-          {children}
-        </StyledHeader>
+        <h1 className="Hero text-accent mb-4" onClick={toggleMode}>
+          Chris L<span className="text-6xl">o</span>Presto
+        </h1>
       )}
     </FontSubscriber>
   );
