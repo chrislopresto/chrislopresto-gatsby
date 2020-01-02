@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "precommit": "lint-staged",
+    "prettier:check": "prettier \"{,!(node_modules)/}**/*.{ts,tsx,js,json,css}\" --check",
     "prettier:write": "prettier \"{,!(node_modules)/}**/*.{ts,tsx,js,json,css}\" --write",
     "develop": "gatsby develop",
     "build": "gatsby build",
