@@ -1,0 +1,118 @@
+import Hero from '../components/Hero';
+import SEO from '../components/SEO';
+
+<Hero />
+<SEO title="Chris LoPresto | Engineering leader. Musician." />
+
+# Hot Swapping Our Rails Front End In Secret - A Rebrand Story
+
+## Intro
+
+Hello. Thank you for coming. Today I'm going to share the story of how the team at Betterment secretly swapped out the entire front end for several of our apps last year in order to launch our new brand identity.
+
+My name is Chris LoPresto. I lead front end architecture at Betterment, and I love helping engineering and design teams find ways to work better together. I play some non-computer keyboards, and you can find me @chrislopresto on GitHub or Twitter.
+
+## Rebranding Betterment
+
+Last year Betterment spent 6 months creating a new brand identity. This meant reimagining the company's mission statement, photography style, logo, color palette, the entire user interface of our web and mobile apps, online calculators, emails. Everything had to change.
+
+From start to launch, the entire project took six months. It was the last two month stretch when we built everything.
+
+Now this was an aggressive timeline. We did it to ourselves. Our agency said to expect at least 12 months for the brand exercise. So we said, "How ‘bout half? How ‘bout half that?" We could aim for Betterment's birthday. It’ll be at end of May. That’ll be great. It’ll be after tax season, so no one will freak out if their tax forms suddenly look different. It’ll be before the summer, because no one reads press releases from the beach. Worst that happens, we delay it a little bit.
+
+## Before and After
+
+So in March, this is what our homepage looked like.
+
+But by May we wanted to snaz it up. New colors, photography. New content throughout all of betterment.com.
+
+We wanted to apply the brand to our Retail app. This is what our summary page looked like in March.
+
+By May we wanted new navigation, that new wordmark in the top. Everything’s tighter because it’s on a grid system. 
+
+Now investing involves risk. Past performance does not guarantee future results.Although it does look like this user’s about to have a really good two months. So we got that goin' for us
+
+This is what our Portfolio page looked like. Basically theproject requirements were, "You see that over there? Yeah? Can't look that way anymore.” So if this seems wildly impractical, buckle up.
+
+## Rebranding Betterment 2
+
+Our mission is to redesign everything in 8 weeks, in secret. We want this timed big reveal. All of our apps change at once. Articles appear online. Then we'll bask in beauty of our brand new brand.
+
+Then we thought, well if we already have to touch everything anyway, while we’re in the neighborhood, what if we made everything responsive? You know, never waste a crisis.
+
+So what are we talking about here?
+
+## Before / After - Responsive
+
+Uh oh. These designs were never going to work at these small sizes. It was going to take a lot of work to get from that
+
+ to this
+
+Reconstruct all our CSS, all our HTML by May.
+
+You're probably thinking, “It’s gonna be fine.” We’ll just whip out our trusty feature flag framework, design system... and get to work.
+
+## Prerequisites
+
+At this point it is helpful if you already have one of each. Which we do. If you don’t, no worries. Hopefully this story piques your interest.
+
+## Feature flag prerequisite - Dark deploying behind feature flags
+
+Big projects are risky, in part because they change a lot of code. One of best ways to cope with risk is by slicing your work up into tiny pieces and shipping them one at a time. Now this means shipping incomplete work. That’s ok. You wait until it’s ready. You hide it behind a feature flag. And once it is ready, flip a switch, turn it on.
+
+Now a huge advantage of this approach is that you can solve problems one at a time when they pop up. You can see what’s working, what’s not. Change your mind about things. And you’re not jerking your users around as you figure all this out.
+
+But a rebrand is so big, it touches everything. How do you put everything behind a feature flag?
+
+At first we didn't know how, but our engineering principles dictated that we had to find a way. The Only way to have a worry-free launch day was to not ship any code on that day. Instead we’d have to get to point we're happy with, flip the switch, andturn it on.
+
+Betterment's feature flag framework is called TestTrack.
+
+## TestTrack
+
+It follows visitors and users across devices. We have clients for Rails, JavaScript, and all our mobile apps. We use it all the time to run experiments and dark deploy features.
+
+If you don't yet use feature toggles in your workflow, you Should definitely consider it. It’ll change your life. There are a few gems and some excellent services out there that make it really easy to get going.
+
+But slicing up work doesn't do much good if each slice ruins the last one. Which is often the case when CSS is involved.
+
+## Design system prerequisite
+
+For this project especially, we needed to assemble new interfaces on the fly across multiple apps. See what worked. See what didn't.
+The best way – really the only way to do this efficiently and creatively – is a component-oriented design system which would give us reusable building blocks.
+
+Betterment's design system is called Style Closet.
+
+## Style Closet
+
+It lets us share patterns and components, evoke Betterment's look and feel across all of our apps. If you don't have a design system, don’t worry. We had to rewrite ours entirely as part of this project.
+
+The important thing to remember is that TestTrack and Style Closet were already integrated in all our apps. Otherwise, no way that this 8 week project timeline would have been remotely possible.
+
+## Fortune favors the prepared
+
+Investing in our systems over the years had put us in a good position such that what once would have been deemed wildly impractical Actually became the basis of our project plan.
+
+But we didn’t know what that meant at the beginning of the project. We were just wondering, “How in the world are we going to do this?”
+
+## Trailblaze: how are we going to launch
+
+Forget Gantt charts and press releases. We just need a halfway believable way to get this out the door. How can we get from here to there at all?
+
+To which the engineers say, “I don't know.” But also, “Spike.” Just do something. It doesn’t matter if your prototype is dumb as long as it's concretely dumb. Which is why I like to ask myself, “What's the dumbest thing that could possibly work?” Well, here we go.
+
+## Launch Technique - Idea
+
+We already ship a design system into each app. So I thought, what if we create a rebranded version of the design system? Each app already has a SCSS manifest. What if we made a second one that used the rebranded system behind a feature flag? And then finally, we know that the new responsive designs need different markup. What if we add some view logic that understands the feature flag and knows how to keep our two worlds separate – the stuff that’s in production, and all the new rebranded stuff.
+
+It seemed reasonable enough. So we got to work.
+
+## Two CSS Manifests - Old
+
+I spent about one minute writing the beautiful "rebrand" CSS that you see here. I wanted something garish, so I figured white on blue oughta do. And I wrote some JavaScript to toggle these styles on  in our design system docs site. With the old styles, the typography demo looked like this.
+
+With the new vastly improved styles, it looked like this. 
+
+## Two CSS Manifests - New
+
+Totally nailed it, right?

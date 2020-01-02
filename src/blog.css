@@ -1,0 +1,11 @@
+h1 {
+  @apply text-4xl font-bold leading-none mb-5;
+}
+
+h2 {
+  @apply text-2xl font-bold leading-none mb-2;
+}
+
+p {
+  @apply mb-5;
+}
