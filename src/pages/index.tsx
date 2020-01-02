@@ -4,7 +4,6 @@ import Hero from '../components/Hero';
 import Layout from '../components/Layout';
 import RevealJsSlideDeck from '../components/RevealJsSlideDeck';
 import SEO from '../components/SEO';
-import '../index.css';
 
 export default () => {
   return (

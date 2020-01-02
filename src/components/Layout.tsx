@@ -2,6 +2,7 @@ import React, { ReactNode } from 'react';
 import { FontObserver } from 'react-with-async-fonts';
 import { SiteModeProvider } from '../theme/SiteModeContext';
 import SEO from './SEO';
+import '../index.css';
 
 const Layout = ({ children }: { children: ReactNode }) => {
   return (
