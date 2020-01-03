@@ -10,10 +10,12 @@ const Layout = ({ children }: { children: ReactNode }) => {
       {/*
         // @ts-ignore incorrect FontObserver children types */}
       <FontObserver hero="Marvin Visions Big">
-        <>
-          <SEO />
-          {children}
-        </>
+        <div className="flex justify-center">
+          <div>
+            <SEO />
+            {children}
+          </div>
+        </div>
       </FontObserver>
     </SiteModeProvider>
   );
