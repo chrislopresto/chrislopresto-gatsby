@@ -1,7 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
-import { useSiteModeState } from '../theme/SiteModeContext';
+import { useSelector } from 'react-redux';
+import { RootState } from '../rootReducer';
 
 interface Props {
   title: string;
@@ -12,7 +13,7 @@ interface Props {
 }
 
 const SEO = ({ title, description, image, pathname, article }: Props) => {
-  const { mode } = useSiteModeState();
+  const { mode } = useSelector((state: RootState) => state.siteMode);
 
   return (
     <StaticQuery
