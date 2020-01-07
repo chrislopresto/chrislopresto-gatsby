@@ -1,12 +1,13 @@
 import React, { ReactNode } from 'react';
 import { FontObserver } from 'react-with-async-fonts';
-import { SiteModeProvider } from '../theme/SiteModeContext';
 import SEO from './SEO';
 import '../index.css';
+import { Provider } from 'react-redux';
+import store from '../store';
 
 const Layout = ({ children }: { children: ReactNode }) => {
   return (
-    <SiteModeProvider mode="dark">
+    <Provider store={store}>
       {/*
         // @ts-ignore incorrect FontObserver children types */}
       <FontObserver hero="Marvin Visions Big">
@@ -17,7 +18,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
           </div>
         </div>
       </FontObserver>
-    </SiteModeProvider>
+    </Provider>
   );
 };
 
