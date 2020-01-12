@@ -62,7 +62,7 @@ export default () => {
           <div className="mb-6">
             <Link to="/presentations/hot-swapping-our-rails-front-end-in-secret" target="_blank">
               <p>Hot Swapping Our Rails Front End in Secret</p>
-              <p className="mb-2 text-xs font-bold">EmberConf 2016</p>
+              <p className="mb-2 text-xs font-bold">RailsConf 2018</p>
               <RevealJsSlideDeck
                 title="betterment-rebranding-bonanza"
                 slug="betterment-rebranding-bonanza"
@@ -75,7 +75,7 @@ export default () => {
           <div className="mb-6">
             <Link to="/presentations/living-style-guide-driven-development">
               <p>Living Style Guide Driven Development</p>
-              <p className="mb-2 text-xs font-bold">RailsConf 2018</p>
+              <p className="mb-2 text-xs font-bold">EmberConf 2016</p>
               <RevealJsSlideDeck
                 title="living-style-guide-driven-development"
                 slug="living-style-guide-driven-development"
