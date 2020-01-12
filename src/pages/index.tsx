@@ -1,6 +1,6 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import Hero from '../components/Hero';
+import { Hero } from '../components/Hero';
 import Layout from '../components/Layout';
 import RevealJsSlideDeck from '../components/RevealJsSlideDeck';
 import SEO from '../components/SEO';

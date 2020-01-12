@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import '../blog.css';
 import Layout from './Layout';
-import Hero from '../components/Hero';
+import { Hero } from '../components/Hero';
 
 const BlogLayout = ({ children }: { children: ReactNode }) => {
   return (

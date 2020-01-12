@@ -7,7 +7,7 @@ interface Props {
   className?: string;
 }
 
-const Hero = ({ className }: Props) => {
+export const Hero = ({ className }: Props) => {
   const dispatch = useDispatch();
   const toggleSiteMode = useCallback(() => dispatch(toggleMode()), [dispatch]);
 
@@ -21,5 +21,3 @@ const Hero = ({ className }: Props) => {
     </FontSubscriber>
   );
 };
-
-export default Hero;
