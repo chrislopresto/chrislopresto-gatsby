@@ -10,11 +10,12 @@ interface Props {
 export const Hero = ({ className }: Props) => {
   const dispatch = useDispatch();
   const toggleSiteMode = useCallback(() => dispatch(toggleMode()), [dispatch]);
+  const headerClassName = `Hero text-accent mb-4 ${className}`;
 
   return (
     <FontSubscriber>
       {() => (
-        <h1 className="Hero text-accent mb-4" onClick={toggleSiteMode}>
+        <h1 className={headerClassName} onClick={toggleSiteMode}>
           Chris L<span className="text-6xl">o</span>Presto
         </h1>
       )}
