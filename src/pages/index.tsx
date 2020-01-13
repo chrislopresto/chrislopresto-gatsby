@@ -1,13 +1,13 @@
 import { Link } from 'gatsby';
 import React from 'react';
 import { Hero } from '../components/Hero';
-import Layout from '../components/Layout';
+import { MainLayout } from '../layouts/MainLayout';
 import { RevealJsSlideDeck } from '../components/RevealJsSlideDeck';
 import SEO from '../components/SEO';
 
 export default () => {
   return (
-    <Layout>
+    <MainLayout>
       <SEO title="Chris LoPresto | Engineering leader. Musician." />
       <div className="p-3 md:p-5 text-primary font-mono">
         <section className="mb-10 max-w-3xl">
@@ -87,6 +87,6 @@ export default () => {
           </div>
         </section>
       </div>
-    </Layout>
+    </MainLayout>
   );
 };

@@ -1,11 +1,11 @@
 import React from 'react';
 import { RevealJsSlideDeck } from '../../components/RevealJsSlideDeck';
-import Layout from '../../components/Layout';
+import { MainLayout } from '../../layouts/MainLayout';
 import SEO from '../../components/SEO';
 
 export default () => (
-  <Layout>
+  <MainLayout>
     <SEO title="Living Style Guide Driven Development" />
     <RevealJsSlideDeck title="living-style-guide-driven-development" slug="living-style-guide-driven-development" />
-  </Layout>
+  </MainLayout>
 );

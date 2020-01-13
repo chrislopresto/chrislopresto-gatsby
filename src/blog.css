@@ -1,11 +1,11 @@
-.BlogLayout h1 {
+.BlogContentLayout h1 {
   @apply text-4xl font-bold leading-none mb-5;
 }
 
-.BlogLayout h2 {
+.BlogContentLayout h2 {
   @apply text-2xl font-bold leading-none mb-2;
 }
 
-.BlogLayout p {
+.BlogContentLayout p {
   @apply mb-4;
 }
