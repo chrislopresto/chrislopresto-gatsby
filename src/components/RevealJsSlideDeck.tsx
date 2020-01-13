@@ -12,7 +12,7 @@ interface Props {
   slug: 'living-style-guide-driven-development' | 'betterment-rebranding-bonanza';
 }
 
-const RevealJsSlideDeck: React.SFC<Props> = props => {
+export const RevealJsSlideDeck: React.SFC<Props> = props => {
   let width = props.width || DEFAULT_WIDTH;
   let height = props.height || DEFAULT_HEIGHT;
   let showControls = props.showControls === false ? 'false' : 'true';
@@ -31,5 +31,3 @@ const RevealJsSlideDeck: React.SFC<Props> = props => {
     <iframe title={props.title} className="block border-0" style={style} src={src} width={width} height={height} />
   );
 };
-
-export default RevealJsSlideDeck;
