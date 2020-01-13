@@ -11,7 +11,8 @@
     "develop": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "test": "jest"
+    "test": "jest",
+    "storybook": "start-storybook"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.2.1",
@@ -26,6 +27,8 @@
     "@babel/core": "^7.8.0",
     "@mdx-js/mdx": "^1.5.3",
     "@mdx-js/react": "^1.5.3",
+    "@storybook/addon-knobs": "^5.3.1",
+    "@storybook/react": "^5.3.1",
     "@types/jest": "^24.0.25",
     "@types/query-string": "^6.3.0",
     "@types/react": "^16.9.17",
@@ -35,6 +38,7 @@
     "@typescript-eslint/parser": "^2.15.0",
     "autoprefixer": "^9.7.3",
     "babel-jest": "^24.9.0",
+    "babel-loader": "^8.0.6",
     "babel-preset-gatsby": "^0.2.27",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.9.0",
@@ -42,6 +46,7 @@
     "eslint-loader": "^3.0.3",
     "eslint-plugin-import": "^2.20.0",
     "eslint-plugin-react": "^7.17.0",
+    "fork-ts-checker-webpack-plugin": "^3.1.1",
     "gatsby": "^2.18.21",
     "gatsby-plugin-eslint": "^2.0.8",
     "gatsby-plugin-mdx": "^1.0.67",
@@ -58,8 +63,10 @@
     "postcss-preset-env": "^6.7.0",
     "prettier": "^1.19.1",
     "purgecss-webpack-plugin": "^1.6.0",
+    "react-docgen-typescript-loader": "^3.6.0",
     "tailwindcss": "^1.1.4",
     "ts-jest": "^24.3.0",
+    "ts-loader": "^6.2.1",
     "typescript": "^3.7.4"
   }
 }
