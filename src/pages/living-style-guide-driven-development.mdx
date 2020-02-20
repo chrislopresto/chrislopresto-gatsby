@@ -1,0 +1,392 @@
+import SEO from '../components/SEO';
+
+<SEO title="Living Style Guide Driven Development | Chris LoPresto" />
+
+# Living Style Guide Driven Development
+
+## Intro
+
+My name is Chris LoPresto. I live in the greatest city in the world. I work at Yapp where we make Ember apps that make mobile apps that run Ember apps.
+Before that I was CTO of Plyfe
+I play a bunch of non-computer keyboards
+And you can find me @chrislopresto on Twitter, on GitHub, the Ember Community Slack, and hopefully everywhere because I learned my lesson when I lost out on Hotmail.
+
+## Not a Designer
+
+Now I am not a designer, but I've worked really closely with many wonderful designers over the years. And together we've found all sorts of ways to bump our heads. So I've come to care deeply about why that happens and how to prevent it. So that's why I want to talk to you about style guides.
+
+## Style guide
+
+Now when people hear the term style guide, they usually think of aesthetic standards like this excellent work from the US Digital Service. You know, color palettes and fonts, buttons and forms that help create a consistent look and feel. Now most digital style guides stop here, documenting at this UI element level. But today we're going to explore how driving development...
+
+## The Promise
+
+...through a living style guide – that looks something like this – can simplify many aspects of our web design process. By presenting all of our application's components in one place, we can shorten feedback cycles, simply by working with this design showcase. Now if you're familiar with other style guide projects, you may be thinking this is just more stuff to worry about and maintain. But here's where Ember comes in.
+
+## Ember Fueled
+
+Now of course the last thing we want to do is add something else new to our development proces. Another meeting, another tool, a dependency on leftpad. Now in the Ember ecosystem we have fantastic tooling and conventions that help jumpstart and pool development effort. Wins accumulate when we lean into the framework.
+
+So hopefully we can just type `ember install styleguide`. Well, unfortunately in this case we are not quite there. But I have some stories I want to share first anyway. You see, we didn't have Ember CLI...
+
+## Year 2000 Gif
+
+...in the year 2000. When Conan was ascendant on Late Night. This is when I built my  first website. I had a band... wanted to get the word out, so I built this site, showed it to all my friends.
+
+## Year 2000
+
+And the crowd went mild. To make matters worse, our tech was better than our music. And while I garnered praise for my adept use of frames, my friends pointed out that I should not attempt a solo web career. Therefore...
+
+## Not a Design Talk
+
+...this is not a design talk. We're going to leave selecting shades of green to the professionals. Now every few months the internet seems to erupt over this sort of thing. As a child of the 80s, personally I think Hi-C nailed it back in the day. That was peak green.
+
+The point is – there's a diverse set of skills involved in web development, and we each possess a subset of them. So I teamed up with a designer. We relaunched the website, and while the band did *not* take off, our web company did.
+
+## Year 2003
+
+In 2003, the Web at v1.0. Now I never really understood web versioning. It's clear we're not using SEMVER. But companies were paying my buddy and me hundreds of dollars to build websites. And we thought this great.
+
+So we land our first bigger customer, and we're seeing those dollar signs. He designs the site. I start to build it. Emphasis on "start". As it turns out...
+
+## Design Impossible Things
+
+It is possible to design impossible things. Apparently Photoshop is not built on webkit.
+
+## Year 2009
+
+Now in 2009, my team and I are on the 40th floor of the Hearst Tower in Columbus Circle. Captain Sully crash lands in the Hudson River. We all race to the side of the building... just missed seeing the plane float by. We were building a fancy template engine for newspapers on e-readers. We could make the Times look like the Times. We could make the Post look like the Post. We had designed multiple versions of multiple page layouts for multiple publications.
+
+## Ship Wrong
+
+And then we shipped the wrong design to production. Now, this was neither the first time nor the last time that someone just looked at the wrong Photoshop export. But you have to laugh – after the fact – at how all this fancy tech is so easily undone by us humans.
+
+## Year 2013
+
+Now in 2013, my team is building personality quizzes and sweepstakes, and we decide we need to support custom themes for our customers. This meant we had to clean up CSS, and we find 37 shades of grey in there. Now the jokes that ensue grow tiresome over the two weeks we spent cleaning up to get this feature out the door. So it turns out...
+
+## Web development is hard
+
+Web development is hard. It's fun. It's fast-paced. It can be hard. You know, projects start cleanly, and then they get messy despite the best efforts of smart people making the best decisions under the circumstances.
+
+But why does this happen all the time? What is so hard about...
+
+## Why is web development so hard?
+
+Interdisciplinary teams collaborating to continuously deliver modern applications, targeting the latest browsers and devices in an action-packed JavaScript landscape... all while the product keeps changing?
+
+Well that's a long and winding rhetorical road, and we never do reach the end. But at end of the day it turns out there's bunch of humans involved. Designers and engineers. Product visionaries and thought leaders figuring out what to build and then changing our minds.
+
+When you have dozens of people making dozens of decisions over dozens of weeks, this leads to literally – literally – dozens of problems. I like to call this design confusion.
+
+## Design Confusion
+
+Symptoms Include designing impossible things like UIs a 3rd party library can't adhere to or losing track of files as the Dropbox goblins exact their weekly toll. We get our signals crossed at the intent of a feature and we end up building things we don't need. It happens to the best of us and, therefore, all of us.
+
+So what is a living style guide, and how will it help with the sleep eating?
+
+## Living style guide
+
+A living style guide is a design showcase built using a live presentation codebase. Now I love this idea. I've tried bunch of these projects over the years. Most showcase current CSS using dummy html, and behaviors and interactions tend to fall by the wayside.
+
+You kinda have a copy of your design, and you have to maintain this like documentation. It is bound to become out of date. Now I would argue this approach is treating the symptoms rather than the causes of design confusion.
+
+But a year ago, Hugh Francis published an Agile Design Manifesto for Ember. In it he discussed
+
+## Inspiration via Manifesto
+
+Gin Lane's agile design process as they built out a new ordering system for Sweetgreen, which is a fantastic lunch spot if you're in New York City. Now they would articulate pieces of design and formulate design tiles. Each tile became an Ember component. And they decided to add these components to a dedicated `styleguide` route. This allowed their CSS guru to load that one page and do all of the nitty gritty style work without needing to know the technical details of the application or Ember.
+
+Now the article was full of great ideas, not the least of which is this emphasis on distilling a design into its individual components.
+
+## Composing with Components
+
+Now we should all be deconstructing our applications UIs this way. Modern JavaScript frameworks like Reembular.js all provide a component implementation that provides the means to encapsulate behavior, appearance, and structure.
+
+So gone are the days of hopelessly entangled JavaScript and CSS that causes the same piece of HTML used in two places to yield wildly different results – different behaviors, different appearances. And if we're disciplined about this...
+
+## Thoughtful Composition
+
+We can compose interfaces out of components that are themselves assembled from other components and arrive at an application that is coherent and flexible, testable and maintainable – that's beautiful. There are gestalt wins at play.
+
+Now the key insight of the blog post was to present the application's components in the separate context of the living style guide. And in one fell swoop this obviated the architectural shortcomings of all those other style guide projects that I had tried previously. Because the things in the style guide were now the actual things, not approximations.
+
+Now on a Yapp Labs project about year ago, we had carte blanche, and we decided to try this out. And the results exceeded expecations straightaway.
+
+## Example - UI Elements
+
+Now on the first day, we had a bunch of designs – signup flows, whole sections of app. What we didn't have were AWS credentials or web server. Or an auth system or any APIs. But we didn't need any of that to get to work. We created a `styleguide` route, and we added components to its template.
+
+Starting with these buttons and then inputs, then forms and validation behaviors. Before we knew it, we had a bunch of UI components that were production ready in just a few hours.
+
+So what do think we did when the CEO emerged from a meeting? Other than ask for the AWS credentials? We showed him our work. You can see it in action there. It looked really good. He was blown away. The designer was blown away at how quickly these concepts had sprung to life. And we had stumbled into an unexpected benefit of having a living style guide. Rapid prototyping.
+
+## Rapid prototyping and feedback
+
+We didn't have to wait for infrastructure setup to start building UI pieces in the style guide. Now this worked wonders – divvying up tasks at the onset of a project. Far from being blocked, we were incorporating design feedback on day 1. And this never stopped for the rest of the project.
+
+So let's dive in and build a simple style guide.
+
+## Hello World
+
+It's easier than you might expect. Now this presentation is an Ember app, and each slide is a component. That gives us these actual Ember examples that we can play with. Mini style guides on each slide.
+
+Now imagine you're building an EmberConf website. You have this logo that appears throughout site, and obviously you want Tomster to pop out from behind it. So we need a `{{tomster-logo}}` component.
+
+So we create a styleguide route. You can see that we created this component. It has a template, a backing component file, CSS for that animation that you saw. We put it in the style guide. We don't need whole site to exist to build and marvel at this component. Once site does exist, the component is ready to go.
+
+So now we have basic style guide. Let's do some cool things with it.
+
+## Ephemeral State
+
+Let's talk about loaders, spinners, and progress bars. Designed to be on screen for a fraction of a second. How many times have we added temporary code to force our app to remain artificially stuck in one of these ephemeral states?
+
+We do our work, remove our shim, never to think about it again. Until something goes wrong. These UI bits are notoriously difficult to work on due to their fleeting nature. But the living style guide provides place to keep them forever.
+
+You can see we have lots of versions of this Monegraph loader. That's that "m" icon you see in the middle. We have different sizes, and you can see here we have this big, ol' dev version that's huge and slow. It's _so much_ easier to work with when you're making changes, and then we can see those changes in effect in the loaders that are actually used in the app.
+
+Now the sandbox makes it really easy to make these oft-neglected things look great. And we did a lot of tweaking to get this just right. Designers care deeply about expressing their designs properly. A living style guide isn't just a snapshot of current state. It is an excellent environment to apply finishing touches.
+
+## Design Polish
+
+As we're continually polishing and tweaking, it makes *way* more sense to make these changes on live components rather than in design mocks.
+
+Now I'd like to talk about one of pet peeves. Empty states. Or, more specifically, forgetting about them.
+
+## Empty States
+
+Empty states are a pain in the neck to deal with, partially because it's a pain to put our development environments in them with the right data for them. Now design mockups all feature the most perfect data scenario. Unfortunately our brand new users form first impressions of our apps in precisely these empty states.
+
+Now the living style guide provides an easy way to present multiple states of a component side by side. In this case we have an installs chart for Yapp's customer analytics dashboard,. And in the style guide we stubbed data sources for "nice data", for "no data". Or "waiting for data" forever.
+
+We provide nice messaging to users in the empty state. As a bonus, presenting these scenarios in the style guide forced us to encapsulate this functionality sensibly.
+
+## Enforced Encapsulation
+
+We had to separate our presentation from our data munging, and we built something better than we might otherwise have if we'd been developing in the app where there's always real data flowing. When we broke things, we realized we had leaky abstractions on our hands. This development approach ultimately raised the quality of the component we built.
+
+Now, animations!
+
+## Animations
+
+Animations are fun when done well, but they're often as tricky to work on as the segue into this slide. Now given, we will have the Chrome dev tools open. I'm not talking about that. I'm talking about revving the app in and out of the states that invoke these animations.
+
+In this example Yapp wanted to add helpful hints to first-time users.
+When a user would interact with one of these pulsing circles, affectionately dubbed Hinty, this one-time modal appears. And then, helpfully for us developers, disappears forever.
+
+Now we all know the traditional development approach here. Create a new user and log in. Then click through the 7 steps to get to the right spot. Open those Chrome dev tools, then click the thing that triggers the animation. And now you start making changes. You twiddle with the DOM and CSS until your app is hopelessly out of whack.
+
+And then... you give up. And you blow everything away. And you repeat the process  hundreds of times throughout the day.
+
+Now if we model components effectively, we can toggle back and forth between these states as we refine these animations. In this case we had countless iterations, because we were trying to strike this delicate balance of "noticeable enough" but "hopefully not annoying". And we had the living style guide  live reloading all the way.
+
+There was a lot of work between the design mockup and the launch. It is easy to make things _just so_ in a design mockup.
+
+## Apple Watch
+i
+- Everything fits perfectly / looks great
+- Laughed myself silly / sendup / Apple Watch promo
+- Stay closer to all your professionally photographed model friends with four letter names
+- We all know / that's not how the real world works
+- In the real world / have data
+
+## Data Edge Cases
+- Like this
+- Here / living style guide rides again
+- Show this screen / any designer / they will immediately help fix / any and all / edge cases
+- Here / simple strategy / ratchet down font size / stat goes up
+- As you can see / design now tolerates that number / by the way / _fantastic_ page view count
+- Added benefit / once you fix this / unlikely accidentally break it / without knowing
+- Living style guide / lends our designs / certain durability
+
+## Design Durability
+- If / developing / against style guide / every day
+- Conducting design reviews / demos
+- Implicitly putting our design through its paces
+- Something goes awry visually / tests might not catch it
+- Human will notice
+- Make it difficult to regress
+- Let's dig deeper / situation / know we have / bunch of different / data scenarios to handle
+- Another Yapp Labs project / past year
+- Collectrium / owned by Christie's
+
+## Component Variants
+- Build out / search engine / auction results
+- Many features / integrations / unique to art world
+- Amazon-like search / what sold where / filtering and aggregations / backed by Elasticsearch API
+- Depending on search terms / API returns heterogenous set / search results
+- Multiple categories / paintings / jewelry / wine
+- Each category / rich taxonomy / different shape to the data
+- Bunch of logic / bring this information to the screen / pleasing, consistent fashion
+- Style guide / represent all different scenarios / on screen / same time
+- Stubbed / different data sources / in styleguide controller
+- Before API existed / updated as API changed
+- Confidence / present UI capabilities
+- Strategy and workflows / incorporating / future API changes
+- Because of this / separation
+- *I don't even need to be running the full data API service to work on these components*
+- If I'm a new team member / don't even need to know how these services work / to begin work on these components
+
+## Easy Onboarding
+- Huge benefit / Living style guide provides / easy onboarding
+- So cool to see someone join a project
+- Contribute immediately / without needing to know / everything
+- Application patterns / nicely self-documented / one place / in the style guide
+- Unlike most onboarding documentation / actually up to date
+- Organically improves / scales with application / as we build new things
+- We have / richest most complex / interactions in app / laid out / component form / in the style guide
+- Like this rich step-wise flow / Monegraph platform
+
+## Multi-step Interactions
+- Allows users / compose legal contracts / set up licensing terms / media files
+- Complex capabilities under the hood / needed / simple, intuitive interface
+- Came up with / interactive sentence-builder
+- Functionality didn't exist / when we got designs
+- All sorts of things to model / reason about
+- **LABELS ON**
+- Deconstruct the experience / set of components / present in series / style guide
+- Allowed us to play with everything / see how it felt / if things made sense
+- Incorporate changes
+- End result / beautiful / web / mobile app
+- At one point / during process / designer / Chris Gardella
+- Mentioned feedback on animations / transitions / lots of minor things
+- Give doc by end of day / we could implement next week
+- Instead / I suggested / working together / at my laptop
+
+## Testimonial - Collaboration, Chris Gardella
+- What followed / fun two hour / design audit and refresh
+- Efficient dialogue / analyzed the design holistically / made changes / style guide
+- When I loaded app / he saw our work / "already live" / designer cartwheels
+- Chris and I reflecting recently / this process / often far less effficient
+- Design studios / designers log support tickets / revisions
+- Engineers implement / misunderstandings emerge / a lot of back and forth / clarify the designer's intent
+- The living style guide gets around all of that.
+- It's very liberating to see changes enacted immediately.
+- At this point / everyone / sold
+- Ready / create living style guide
+
+## Create a living style guide
+- How should we go about building it?
+- Everything™ in a modern Ember app is made from components
+- So we need style guide component
+- If your next thought was
+- Maybe someone else has already done this...
+- This time / you're in luck
+- `ember install ember-freestyle` (fragment reveal)
+- Collected / thoughts and learnings / past year
+- Come away with / Ember addon / makes it easy / add a living style guide to your Ember app
+- Called ember-freestyle
+- And out of the box it gives you something that looks like this
+
+## Example Living Style Guide
+- All examples / this presentation / built with components / provided / ember-freestyle addon
+- Every interactive example
+- **NAVIGATE EPHEMERAL**
+- Navigate menus
+- **USAGE CONTROLS ON**
+- **CODE ON**
+- **NOTES ON**
+- Notes / Code Samples
+- **USAGE CONTROLS OFF**
+- **CODE OFF**
+- **NOTES OFF**
+- **NAVIGATE ALL**
+- **COLLAPSE LEFT NAV**
+- All side navigation collapsible / designed / testing responsive behavior
+- Load style guide / on your phone or tablet / see how every piece of your application fares
+- Saves a _lot_ of tapping around the actual app
+- See something / want to work on
+- **FOCUS TOMSTER LOGO**
+- Focus / make changes / let live reload do its thing
+- Can even share URL / teammate / page load up / same component focused / query params
+- **EXPAND LEFT NAV**
+- **CLICK ALL**
+- **CODE ON**
+- **NOTES ON**
+- All set up for us / by ember-freestyle
+- Tweet URL of this presentation / GitHub repository / slides and code / peruse / join in the fray
+- Early stages / Already easy to work with
+- Toe to toe feature-wise / other style guide projects / fraction of overhead
+- Polite, lightweight Ember citizen
+    - No additional dependencies*
+    - Fully encapsulated CSS using SUIT CSS naming conventions
+    - Safe to use in your app
+- So that's / ember-freestyle
+- One bit of Ember-y goodness / take a peak at
+- Component for code snippets
+
+## Code Snippets and Markdown Notes
+- freestyle-usage component renders handlebars snippet of what it yields
+- All you need / wrap your component / Tomster Logo
+- In `freestyle-usage` compoennt
+- Render component / alongside handlebars snippet
+- Shows other developers / how to use
+- Additionally / comment delimiters / anywhere in application codebase / flag a code snippet / pulled into style guide
+- Same goes / markdown notes
+- `freestyle-note` component
+- Optionally / comment delimiters / to pipe special code comments in app / into style guide
+- So cool / have all of this just happen / using actual code / same repository
+
+## What's next for ember-freestyle
+- Plenty of work to do
+- Would certainly appreciate help
+- GitHub repository: chrislopresto/ember-freestyle
+- Bunch of issues
+- Most notably / testing / documentation
+- Get this in more people's hands
+- Reality is / today
+
+## You are one console command away from a living style guide in your Ember app
+- If you are already building / composable UIs / with components / reasonably encapsulated styles
+- Spin one right up
+- If your app / not as well organized / count this as another reason / refactor towards modern Ember conventions
+- Really are empowering
+
+## Empowering Ember Conventions
+- Living style guide driven development approach / I'm touting / relies on
+- Ember components
+- Other addons
+- Service patterns and query params
+- Build hooks / for those code snippets
+- Ember CLI / put the whole thing together
+- Amazing to be able to do all of this
+- Even more amazing / to be able to package into an addon / share with any Ember app
+
+## Further Exploration
+- Where do we go from here?
+- Many problems to solve / many of you / likely pondering some of them right now
+- Payload size
+    - Engines / useful / future
+    - Consider build hooks / interim / conditionally / serve style guide
+- Bigger organizations / Salesforce / tackling problem
+    - Presenting consistent experiences / across large suites of apps / across multiple platforms
+    - Salesforce / open source project / theo
+    - Seeking / establish single source of truth / design properties
+    - Common JSON config
+- Interesting opportunities / use style guide / testing
+    - Acceptance tests
+    - Screenshots / visual regression
+- Lots to do / design problems transcend any addon / framework / team
+- Excited to tackle them / together
+- I've been thinking / lot lately / how technical teams work together
+- Things that have changed over the years / things that haven't
+- Ultimately / I'm happiest when people are working / together
+
+## A More Perfect Union / Design + Engineering
+- Closely / efficiently
+- Should avoid overcomplicating interactions
+- Things we work on / already complicated enough
+- I love teams / optimize for collaboration
+- John Maeda / recently tweeted / how design partners with engineering
+- Imagine and realize a product / not only reliable / has soul
+- Often easier / spin the chair around / speak out loud to webcam
+- Than / open an issue / throw something over the fence / on to the backlog
+- I routinely marvel / at how far web technology has come / since I first started out
+- So many things are possible now / technically / interpersonally / that we couldn't dream of / 5, 10, 15 years ago
+- Feels like surfing a renaissance
+- Above all, have fun
+- Tackling tricky problems / good people
+- That's why we all started doing this in the first place
+
+## Thanks
+- Thank you very much
