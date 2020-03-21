@@ -39,16 +39,28 @@ h2 {
 
 @tailwind utilities;
 
-.mode-light .text-primary {
+.mode-light .text-primary,
+.mode-light .hover\:text-primary:hover,
+.mode-light .active\:text-primary:active,
+.mode-light .focus\:text-primary:focus {
   @apply text-light-primary;
 }
-.mode-light .text-secondary {
+.mode-light .text-secondary,
+.mode-light .hover\:text-secondary:hover,
+.mode-light .active\:text-secondary:active,
+.mode-light .focus\:text-secondary:focus {
   @apply text-light-secondary;
 }
-.mode-light .text-accent {
+.mode-light .text-accent,
+.mode-light .hover\:text-accent:hover,
+.mode-light .active\:text-accent:active,
+.mode-light .focus\:text-accent:focus {
   @apply text-light-accent;
 }
-.mode-light .text-alt {
+.mode-light .text-alt,
+.mode-light .hover\:text-alt:hover,
+.mode-light .active\:text-alt:active,
+.mode-light .focus\:text-alt:focus {
   @apply text-light-alt;
 }
 .mode-light .bg-primary {
@@ -72,16 +84,28 @@ h2 {
   @apply text-light-primary;
 }
 
-.mode-dark .text-primary {
+.mode-dark .text-primary,
+.mode-dark .hover\:text-primary:hover,
+.mode-dark .active\:text-primary:active,
+.mode-dark .focus\:text-primary:focus {
   @apply text-dark-primary;
 }
-.mode-dark .text-secondary {
+.mode-dark .text-secondary,
+.mode-dark .hover\:text-secondary:hover,
+.mode-dark .active\:text-secondary:active,
+.mode-dark .focus\:text-secondary:focus {
   @apply text-dark-secondary;
 }
-.mode-dark .text-accent {
+.mode-dark .text-accent,
+.mode-dark .hover\:text-accent:hover,
+.mode-dark .active\:text-accent:active,
+.mode-dark .focus\:text-accent:focus {
   @apply text-dark-accent;
 }
-.mode-dark .text-alt {
+.mode-dark .text-alt,
+.mode-dark .hover\:text-alt:hover,
+.mode-dark .active\:text-alt:active,
+.mode-dark .focus\:text-alt:focus {
   @apply text-dark-alt;
 }
 .mode-dark .bg-primary {
