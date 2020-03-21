@@ -4,6 +4,7 @@ import { Hero } from '../components/Hero';
 import { MainLayout } from '../layouts/MainLayout';
 import { RevealJsSlideDeck } from '../components/RevealJsSlideDeck';
 import SEO from '../components/SEO';
+import { Signature } from '../components/Signature';
 
 export default () => {
   return (
@@ -85,6 +86,10 @@ export default () => {
               />
             </Link>
           </div>
+        </section>
+        <section className="mb-10">
+          <p className="mb-2 uppercase">Don't panic.</p>
+          <Signature className="w-20 text-primary hover:text-accent" description="Chris LoPresto signatures" />
         </section>
       </div>
     </MainLayout>
