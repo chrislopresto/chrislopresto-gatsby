@@ -29,10 +29,16 @@ h2 {
   @apply text-2xl font-bold;
 }
 
-.Hero {
-  @apply text-hero font-hero font-medium uppercase cursor-pointer;
+.text-hero-treatment {
+  @apply font-medium uppercase cursor-pointer;
+  font-size: 6rem;
   text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
   line-height: 0.85;
+}
+.font-hero-fallback {
+  @apply font-sans tracking-tighter;
+  font-size: 5.2rem;
+  line-height: 1;
 }
 
 @tailwind components;

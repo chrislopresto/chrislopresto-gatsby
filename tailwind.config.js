@@ -1,11 +1,8 @@
 module.exports = {
   theme: {
     extend: {
-      fontSize: {
-        hero: '6rem'
-      },
       fontFamily: {
-        hero: ['Marvin Visions Big', 'sans-serif']
+        hero: ['Marvin Visions Big']
       },
       colors: {
         'light-primary': '#1b3c59',

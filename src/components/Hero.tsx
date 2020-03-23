@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
-import { FontSubscriber } from 'react-with-async-fonts';
 import { useDispatch } from 'react-redux';
+import { FontSubscriber } from 'react-with-async-fonts';
 import { toggleMode } from '../theme/siteModeSlice';
 
 interface Props {
@@ -10,15 +10,18 @@ interface Props {
 export const Hero = ({ className }: Props) => {
   const dispatch = useDispatch();
   const toggleSiteMode = useCallback(() => dispatch(toggleMode()), [dispatch]);
-  const headerClassName = `Hero text-accent mb-4 ${className}`;
 
   return (
     <FontSubscriber>
-      {() => (
-        <h1 className={headerClassName} onClick={toggleSiteMode}>
-          Chris L<span className="text-6xl">o</span>Presto
-        </h1>
-      )}
+      {fonts => {
+        const heroFontClassName = fonts.hero ? 'font-hero' : 'font-hero-fallback';
+        const headerClassName = `text-hero-treatment ${heroFontClassName} text-accent mb-4 ${className}`;
+        return (
+          <h1 className={headerClassName} onClick={toggleSiteMode}>
+            Chris L<span className="text-6xl">o</span>Presto
+          </h1>
+        );
+      }}
     </FontSubscriber>
   );
 };
