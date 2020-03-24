@@ -4,7 +4,7 @@ import { Hero } from '../components/hero/hero';
 import { MainLayout } from '../layouts/main-layout';
 import { RevealJsSlideDeck } from '../components/reveal-js-slide-deck';
 import { SEO } from '../components/seo';
-import { Signature } from '../components/signature/Signature';
+import { Signature } from '../components/signature';
 
 export default () => {
   return (
