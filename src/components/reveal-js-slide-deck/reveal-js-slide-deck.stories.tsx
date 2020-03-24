@@ -3,7 +3,7 @@ import { RevealJsSlideDeck } from '.';
 
 export default { title: 'Slide Deck' };
 
-export const asIs = () => (
+export const slideDeck = () => (
   <RevealJsSlideDeck slug="living-style-guide-driven-development" title="Living Style Guide Driven Development" />
 );
 export const withoutControls = () => (
