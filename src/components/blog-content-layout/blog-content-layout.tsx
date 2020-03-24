@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
-import '../blog.css';
-import { Hero } from '../components/Hero';
-import { MainContentLayout } from './MainContentLayout';
+import '../../blog.css';
+import { Hero } from '../hero/hero';
+import { MainContentLayout } from '../main-content-layout';
 
 interface BlogContentLayoutProps {
   children?: ReactNode;

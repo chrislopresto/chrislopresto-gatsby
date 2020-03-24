@@ -1,5 +1,5 @@
 import React from 'react';
-import { MainContentLayout } from './MainContentLayout';
+import { MainContentLayout } from '.';
 
 export default { title: 'Content Layouts / Main' };
 

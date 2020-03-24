@@ -2,7 +2,22 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 import { useSelector } from 'react-redux';
-import { RootState } from '../rootReducer';
+import { RootState } from '../../rootReducer';
+
+const query = graphql`
+  query SEO {
+    site {
+      siteMetadata {
+        defaultTitle: title
+        titleTemplate
+        defaultDescription: description
+        siteUrl: url
+        defaultImage: image
+        twitterUsername
+      }
+    }
+  }
+`;
 
 interface Props {
   title: string;
@@ -55,8 +70,6 @@ const SEO = ({ title, description, image, pathname, article }: Props) => {
   );
 };
 
-export default SEO;
-
 SEO.defaultProps = {
   title: null,
   description: null,
@@ -65,17 +78,4 @@ SEO.defaultProps = {
   article: false
 };
 
-const query = graphql`
-  query SEO {
-    site {
-      siteMetadata {
-        defaultTitle: title
-        titleTemplate
-        defaultDescription: description
-        siteUrl: url
-        defaultImage: image
-        twitterUsername
-      }
-    }
-  }
-`;
+export { SEO };

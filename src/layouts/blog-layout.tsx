@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
-import { BlogContentLayout } from '../components/BlogContentLayout';
-import { BaseLayout } from './BaseLayout';
+import { BlogContentLayout } from '../components/blog-content-layout';
+import { BaseLayout } from './base-layout';
 
 interface BlogLayoutProps {
   children?: ReactNode;

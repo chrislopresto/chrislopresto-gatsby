@@ -1,5 +1,5 @@
 import React from 'react';
-import { RevealJsSlideDeck } from './RevealJsSlideDeck';
+import { RevealJsSlideDeck } from '.';
 
 export default { title: 'Slide Deck' };
 

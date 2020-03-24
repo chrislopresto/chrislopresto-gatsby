@@ -1,7 +1,7 @@
 import React from 'react';
-import { RevealJsSlideDeck } from '../../components/RevealJsSlideDeck';
-import { MainLayout } from '../../layouts/MainLayout';
-import SEO from '../../components/SEO';
+import { RevealJsSlideDeck } from '../../components/reveal-js-slide-deck';
+import { SEO } from '../../components/seo';
+import { MainLayout } from '../../layouts/main-layout';
 
 export default () => (
   <MainLayout>

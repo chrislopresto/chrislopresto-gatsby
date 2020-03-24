@@ -1,10 +1,10 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import { Hero } from '../components/Hero';
-import { MainLayout } from '../layouts/MainLayout';
-import { RevealJsSlideDeck } from '../components/RevealJsSlideDeck';
-import SEO from '../components/SEO';
-import { Signature } from '../components/Signature';
+import { Hero } from '../components/hero/hero';
+import { MainLayout } from '../layouts/main-layout';
+import { RevealJsSlideDeck } from '../components/reveal-js-slide-deck';
+import { SEO } from '../components/seo';
+import { Signature } from '../components/signature/Signature';
 
 export default () => {
   return (
