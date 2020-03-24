@@ -1,15 +1,3 @@
-/* @import './colors.css'; */
-/* :root {
-  --light--color-primary: #e6fffa;
-  --light--color-secondary: #81e6d9;
-  --light--color-accent: #234e52;
-  --light--color-alt: #f7fafc;
-  --dark--color-primary: #9b2c2c;
-  --dark--color-secondary: #81e6d9;
-  --dark--color-accent: #234e52;
-  --dark--color-alt: #e6fffa;
-} */
-
 @font-face {
   font-family: 'Marvin Visions Big';
   font-style: normal;
@@ -134,17 +122,3 @@ h2 {
 .mode-dark a:focus {
   @apply text-dark-primary;
 }
-
-/* .mode-light {
-  --color-primary: var(--light--color-primary);
-  --color-secondary: var(--light--color-secondary);
-  --color-accent: var(--light--color-accent);
-  --color-alt: var(--light--color-alt);
-}
-
-.mode-dark {
-  --color-primary: var(--dark--color-primary);
-  --color-secondary: var(--dark--color-secondary);
-  --color-accent: var(--dark--color-accent);
-  --color-alt: var(--dark--color-alt);
-} */

@@ -14,12 +14,6 @@ module.exports = {
         'dark-accent': '#11bfae',
         'dark-alt': '#1b3c59'
       }
-      // textColor: {
-      //   primary: 'var(--color-primary)',
-      //   secondary: 'var(--color-secondary)',
-      //   accent: 'var(--color-accent)',
-      //   alt: 'var(--color-alt)'
-      // }
     }
   },
   variants: {},
