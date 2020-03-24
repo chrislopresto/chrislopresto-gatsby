@@ -15,7 +15,7 @@ const ColorSchemeKnobWrapper = ({ children }: ColorSchemeKnobWrapperProps) => {
   const dispatch = useDispatch();
   const isFirstRender = useRef(true);
 
-  const colorSchemeKnob = select('Site Mode', ['light', 'dark'], colorScheme);
+  const colorSchemeKnob = select('Color Scheme', ['light', 'dark'], colorScheme);
   useEffect(() => {
     if (isFirstRender.current) {
       isFirstRender.current = false;
