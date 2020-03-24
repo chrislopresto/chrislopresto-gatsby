@@ -2,7 +2,7 @@
   font-family: 'Marvin Visions Big';
   font-style: normal;
   font-weight: 700;
-  src: local('Marvin Visions Big'), url('./fonts/MarvinVisionsBig-Bold.woff2') format('woff2');
+  src: local('Marvin Visions Big'), url('../fonts/MarvinVisionsBig-Bold.woff2') format('woff2');
 }
 
 @tailwind base;

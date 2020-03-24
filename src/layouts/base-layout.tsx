@@ -2,7 +2,7 @@ import React, { FC, ReactNode } from 'react';
 import { Provider } from 'react-redux';
 import { FontObserver } from 'react-with-async-fonts';
 import { SEO } from '../components/seo';
-import '../index.css';
+import '../styles/core.css';
 import store from '../store';
 
 interface BaseLayoutProps {

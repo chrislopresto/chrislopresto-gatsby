@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import '../../blog.css';
+import '../../styles/blog.css';
 import { Hero } from '../hero/hero';
 import { MainContentLayout } from '../main-content-layout';
 

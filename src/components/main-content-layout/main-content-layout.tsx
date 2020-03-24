@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import '../../index.css';
+import '../../styles/core.css';
 
 interface MainContentLayoutProps {
   children?: ReactNode;

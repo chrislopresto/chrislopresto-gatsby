@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { themes } from '../theme/theme';
+import { themes } from '../styles/theme';
 
 export type Mode = keyof typeof themes;
 
