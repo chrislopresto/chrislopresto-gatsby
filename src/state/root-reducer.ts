@@ -1,10 +1,10 @@
 import { combineReducers } from '@reduxjs/toolkit';
 import { colorSchemeReducer } from './color-scheme';
-import { fontObserverReducer } from './font-observer';
+import { fontLoadingReducer } from './font-loading';
 
 export const rootReducer = combineReducers({
   colorScheme: colorSchemeReducer,
-  fontObserver: fontObserverReducer
+  fontObserver: fontLoadingReducer
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

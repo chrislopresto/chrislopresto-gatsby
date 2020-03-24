@@ -1,7 +1,7 @@
 import { useEffect, useDebugValue } from 'react';
 import { useDispatch } from 'react-redux';
 import { withFonts } from 'react-with-async-fonts';
-import { markHeroFontLoaded } from '../../state/font-observer';
+import { markHeroFontLoaded } from '../../state/font-loading';
 
 interface FontLoadProps {
   fonts?: {
