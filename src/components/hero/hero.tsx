@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 import { useDispatch } from 'react-redux';
 import { FontSubscriber } from 'react-with-async-fonts';
-import { toggleMode } from '../../theme/siteModeSlice';
+import { toggleColorScheme } from '../../state/color-scheme';
 
 interface Props {
   className?: string;
@@ -9,7 +9,7 @@ interface Props {
 
 export const Hero = ({ className }: Props) => {
   const dispatch = useDispatch();
-  const toggleSiteMode = useCallback(() => dispatch(toggleMode()), [dispatch]);
+  const toggleSiteMode = useCallback(() => dispatch(toggleColorScheme()), [dispatch]);
 
   return (
     <FontSubscriber>

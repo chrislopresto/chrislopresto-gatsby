@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import { FontObserver } from 'react-with-async-fonts';
 import { SEO } from '../components/seo';
 import '../styles/core.css';
-import store from '../store';
+import { store } from '../state/store';
 
 interface BaseLayoutProps {
   children: ReactNode;

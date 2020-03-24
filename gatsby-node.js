@@ -21,7 +21,7 @@ const purgeCssConfig = {
       extensions: [`tsx`, `css`]
     }
   ],
-  whitelist: ['mode-dark', 'mode-light'],
+  whitelist: ['color-scheme-dark', 'color-scheme-light'],
   whitelistPatterns: [/body/, /html/, /\-primary/, /\-secondary/, /\-accent/, /\-alt/],
   whitelistPatternsChildren: [/BlogContentLayout$/]
 };
