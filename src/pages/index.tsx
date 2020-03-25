@@ -12,28 +12,25 @@ export default () => {
       <SEO title="Chris LoPresto | Engineering leader. Musician." />
       <div className="p-3 md:p-5 text-primary font-mono">
         <section className="mb-10 max-w-3xl">
-          <Hero />
-          <p className="text-sm">
-            Engineering leader with deep front end expertise. Experience building teams and inspiring change.
-            Professional musician.
-          </p>
+          <Hero className="leading-none" />
+          <p className="text-sm">Engineering leader. Professional musician.</p>
         </section>
 
         <section className="mb-10 max-w-3xl">
-          <h2 className="mb-2 leading-none">Bio</h2>
-          <p className="mb-4">
+          <h2 className="mb-1 leading-none">Bio</h2>
+          <p className="mb-5">
             Chris LoPresto grew up as an oldest child in Delaware, the oldest state. He picked up degrees in Jazz
             Performance (piano) and Computer Science at Exit 9 of the NJ Turnpike before continuing on up to New York
             City.
           </p>
-          <p className="mb-4">
+          <p className="mb-5">
             Chris has performed at iconic venues<sup className="text-xs">*</sup> and dive bars
             <sup className="text-xs">**</sup> around the world
             <sup className="text-xs">***</sup>, most notably with Roc Nation / Epic Records recording artist Hugo. Chris
             has performed on Late Night with David Letterman, Jimmy Kimmel Live!, X Factor, and morning shows that film
             far too early.
           </p>
-          <p className="mb-4">
+          <p className="mb-5">
             More miscellaneously, Chris is an Eagle Scout who has visited 46 of the 50 states and ridden a private
             elevator with a pope
             <sup className="text-xs">****</sup>. He lives in New York City with his wife, Louise, and his dog, Roland,
@@ -58,8 +55,8 @@ export default () => {
         </section>
 
         <section className="mb-10">
-          <h2 className="mb-2 leading-none">Talks</h2>
-          <p className="mb-2">Here are some conference talks I have given.</p>
+          <h2 className="mb-1 leading-none">Talks</h2>
+          <p className="mb-5">Here are some conference talks I have given.</p>
           <div className="mb-6">
             <Link to="/presentations/hot-swapping-our-rails-front-end-in-secret" target="_blank">
               <p>Hot Swapping Our Rails Front End in Secret</p>

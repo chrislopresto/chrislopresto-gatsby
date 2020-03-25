@@ -1,4 +1,4 @@
-import { useEffect, useDebugValue } from 'react';
+import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { withFonts } from 'react-with-async-fonts';
 import { markHeroFontLoaded } from '../../state/font-loading';
@@ -11,8 +11,6 @@ interface FontLoadProps {
 
 const FontLoad = ({ fonts }: FontLoadProps) => {
   const dispatch = useDispatch();
-  useDebugValue('yo');
-  console.log('clop > yoooooooooooooooooooo');
 
   useEffect(() => {
     if (fonts?.hero) {

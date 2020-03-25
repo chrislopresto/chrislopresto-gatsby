@@ -12,7 +12,7 @@ export const Hero = ({ className }: Props) => {
   const invokeToggleColorScheme = useCallback(() => dispatch(toggleColorScheme()), [dispatch]);
   const { heroFontLoaded } = useSelector((state: RootState) => state.fontObserver);
   const heroFontClassName = heroFontLoaded ? 'font-hero' : 'font-hero-fallback';
-  const headerClassName = `text-hero-treatment ${heroFontClassName} text-accent mb-4 ${className}`;
+  const headerClassName = `text-hero-treatment ${heroFontClassName} text-accent ${className}`;
 
   return (
     <h1 className={headerClassName} onClick={invokeToggleColorScheme}>

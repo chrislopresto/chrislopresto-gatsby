@@ -7,26 +7,63 @@
 
 @tailwind base;
 
-html {
-  line-height: 1.15;
+.text-shadow-sm {
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
 }
-body {
-  @apply m-0 leading-snug;
+.text-shadow {
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
 }
-h2 {
-  @apply text-2xl font-bold;
+.text-shadow-light-sm {
+  text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.2);
+}
+.text-shadow-light {
+  text-shadow: 3px 3px 0px rgba(255, 255, 255, 0.2);
 }
 
 .text-hero-treatment {
-  @apply font-medium uppercase cursor-pointer;
-  font-size: 6rem;
-  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+  @apply font-medium uppercase cursor-pointer tracking-normal text-7xl;
   line-height: 0.85;
 }
 .font-hero-fallback {
   @apply font-sans tracking-tighter;
   font-size: 5.2rem;
   line-height: 1;
+}
+.color-scheme-light .text-hero-treatment {
+  @apply text-shadow;
+}
+.color-scheme-dark .text-hero-treatment {
+  @apply text-shadow-light;
+}
+
+html {
+  line-height: 1.15;
+}
+body {
+  @apply m-0 leading-snug;
+}
+h1 {
+  @apply font-hero tracking-wider font-bold text-6xl;
+}
+h2 {
+  @apply font-hero tracking-wider font-bold text-2xl;
+}
+p {
+  @apply leading-tight text-sm;
+}
+
+.color-scheme-light h1 {
+  @apply text-shadow;
+}
+.color-scheme-light h2 {
+  @apply text-shadow-sm;
+}
+
+.color-scheme-dark h1 {
+  @apply text-shadow-light;
+}
+.color-scheme-dark h2 {
+  @apply text-shadow-light-sm;
 }
 
 @tailwind components;

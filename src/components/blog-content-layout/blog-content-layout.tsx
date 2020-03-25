@@ -11,7 +11,7 @@ export const BlogContentLayout = ({ children }: BlogContentLayoutProps) => {
   return (
     <MainContentLayout>
       <div className="p-3 md:p-5">
-        <Hero />
+        <Hero className="mb-6" />
         <div className="BlogContentLayout max-w-3xl text-primary font-mono">{children}</div>
       </div>
     </MainContentLayout>
