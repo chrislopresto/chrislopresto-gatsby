@@ -25,6 +25,7 @@ module.exports = {
     'gatsby-plugin-postcss',
     'gatsby-plugin-typescript',
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-theme-ui',
     {
       resolve: 'gatsby-plugin-eslint',
       options: {
