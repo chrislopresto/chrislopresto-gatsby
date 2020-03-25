@@ -21,7 +21,7 @@
 }
 
 .text-hero-treatment {
-  @apply font-medium uppercase cursor-pointer tracking-normal text-7xl;
+  @apply font-medium uppercase tracking-normal text-6xl;
   line-height: 0.85;
 }
 .font-hero-fallback {
