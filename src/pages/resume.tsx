@@ -1,5 +1,12 @@
 import React from 'react';
+import { Box } from 'theme-ui';
 
 export default () => (
-  <iframe title="Chris LoPresto Resume" className="w-full h-screen" src="../../chris-lopresto-resume.pdf"></iframe>
+  <Box
+    as="iframe"
+    title="Chris LoPresto Resume"
+    sx={{ width: '100%', height: '100vh' }}
+    // @ts-ignore
+    src="../../chris-lopresto-resume.pdf"
+  ></Box>
 );
