@@ -1,8 +1,8 @@
-import React from 'react';
+/** @jsx jsx */
+import { jsx } from 'theme-ui';
 
 interface SignatureProps {
   className?: string;
-  style?: React.CSSProperties;
   description?: string;
 }
 
@@ -10,15 +10,15 @@ export const SIGNATURE_ASPECT_RATIO = 590.0 / 204.0;
 export const getWidth = (height: number) => height * SIGNATURE_ASPECT_RATIO;
 export const getHeight = (height: number) => height / SIGNATURE_ASPECT_RATIO;
 
-export const Signature = ({ className, style, description = 'Chris LoPresto homepage' }: SignatureProps) => {
+export const Signature = ({ className, description = 'Chris LoPresto homepage' }: SignatureProps) => {
   return (
-    <div style={style} className={className}>
+    <div className={className}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0, 0, 590, 204"
         aria-label={description}
         role="img"
-        className="h-full w-full"
+        sx={{ height: '100%', width: '100%' }}
       >
         <title>{description}</title>
         <path

@@ -1,4 +1,6 @@
+/** @jsx jsx */
 import React from 'react';
+import { jsx } from 'theme-ui';
 import * as queryString from 'query-string';
 
 const DEFAULT_HEIGHT = '100vh';
@@ -28,6 +30,13 @@ export const RevealJsSlideDeck: React.SFC<Props> = props => {
   };
 
   return (
-    <iframe title={props.title} className="block border-0" style={style} src={src} width={width} height={height} />
+    <iframe
+      title={props.title}
+      sx={{ display: 'block', border: 0 }}
+      style={style}
+      src={src}
+      width={width}
+      height={height}
+    />
   );
 };

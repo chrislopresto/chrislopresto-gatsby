@@ -1,8 +1,7 @@
+import { graphql, StaticQuery } from 'gatsby';
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { StaticQuery, graphql } from 'gatsby';
-import { useSelector } from 'react-redux';
-import { RootState } from '../../state/root-reducer';
+import { useColorMode } from 'theme-ui';
 
 const query = graphql`
   query SEO {
@@ -28,7 +27,7 @@ interface Props {
 }
 
 const SEO = ({ title, description, image, pathname, article }: Props) => {
-  const { colorScheme } = useSelector((state: RootState) => state.colorScheme);
+  const [colorMode] = useColorMode();
 
   return (
     <StaticQuery
@@ -49,7 +48,7 @@ const SEO = ({ title, description, image, pathname, article }: Props) => {
           <Helmet
             title={seo.title}
             titleTemplate={titleTemplate}
-            bodyAttributes={{ class: `color-scheme-${colorScheme} bg-${colorScheme}-alt` }}
+            bodyAttributes={{ class: `color-scheme-${colorMode} bg-${colorMode}-alt` }}
           >
             <meta name="description" content={seo.description} />
             <meta name="image" content={seo.image} />

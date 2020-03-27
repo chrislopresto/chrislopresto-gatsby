@@ -1,50 +1,57 @@
+/** @jsx jsx */
 import { Dialog } from '@reach/dialog';
 import { Link } from '@reach/router';
-import React, { useCallback, useEffect } from 'react';
+import React, { Fragment as _, useCallback } from 'react';
 import { IoMdMenu } from 'react-icons/io';
-import { useDispatch, useSelector } from 'react-redux';
-import { Box, IconButton, useColorMode } from 'theme-ui';
-import { toggleColorScheme } from '../../state/color-scheme';
-import { RootState } from '../../state/root-reducer';
+import { Box, Flex, IconButton, jsx, useColorMode } from 'theme-ui';
 import { SectionLayout } from '../section-layout';
 import { getWidth, Signature } from '../signature';
-import { NavPanel, NAV_PANEL_BACKGROUND_COLOR } from './components';
+import { NavPanel, NAV_PANEL_BACKGROUND_COLOR, NAV_PANEL_VERTICAL_PADDING_INDEX } from './components';
 
 export const SIGNATURE_HEIGHT_PX = 48;
 export const SIGNATURE_WIDTH_PX = getWidth(SIGNATURE_HEIGHT_PX);
 export const ICON_SIZE = 24;
 
 export const Nav = () => {
-  const dispatch = useDispatch();
-  const [, setColorMode] = useColorMode();
-  const { colorScheme } = useSelector((state: RootState) => state.colorScheme);
-  useEffect(() => {
-    const themeUiColorMode = colorScheme === 'dark' ? 'dark' : 'default';
+  const [colorMode, setColorMode] = useColorMode();
+  const toggleColorMode = useCallback(() => {
+    const themeUiColorMode = colorMode === 'dark' ? 'default' : 'dark';
     setColorMode(themeUiColorMode);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-  const invokeToggleColorScheme = useCallback(() => {
-    dispatch(toggleColorScheme());
-    const themeUiColorMode = colorScheme === 'dark' ? 'default' : 'dark';
-    setColorMode(themeUiColorMode);
-  }, [colorScheme, dispatch, setColorMode]);
+  }, [colorMode, setColorMode]);
   const [showNavPanel, setShowNavPanel] = React.useState(false);
   const openNavPanel = useCallback(() => setShowNavPanel(true), []);
   const closeNavPanel = useCallback(() => setShowNavPanel(false), []);
 
   return (
-    <>
-      <nav className="text-accent flex justify-between items-center -mx-4 py-2">
-        <div className="px-4 relative">
+    <_>
+      <nav
+        sx={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          mx: -5,
+          py: NAV_PANEL_VERTICAL_PADDING_INDEX,
+          color: 'accent'
+        }}
+      >
+        <div sx={{ px: 5 }}>
           <Box
             as="span"
-            sx={{ cursor: 'pointer', flexBasis: `${SIGNATURE_WIDTH_PX}px` }}
-            onClick={invokeToggleColorScheme}
+            sx={{
+              cursor: 'pointer',
+              flexBasis: `${SIGNATURE_WIDTH_PX}px`,
+              '&:hover': {
+                color: 'text'
+              },
+              '&:focus': {
+                color: 'text'
+              }
+            }}
+            onClick={toggleColorMode}
             tabIndex={0}
           >
             <Signature
-              className="text-accent hover:text-primary"
-              style={{
+              sx={{
                 height: `${SIGNATURE_HEIGHT_PX}px`,
                 width: `${SIGNATURE_WIDTH_PX}px`,
                 minWidth: `${SIGNATURE_WIDTH_PX}px`
@@ -52,28 +59,68 @@ export const Nav = () => {
             />
           </Box>
         </div>
-        <Box className="px-4 flex-grow" sx={{ display: ['none', 'block'] }}>
-          <div className="flex -mx-4">
-            <Link to="/">
-              <h2 className="px-4 text-sm">Home</h2>
+        <Box sx={{ px: 5, flexGrow: 1, display: ['none', 'block'] }}>
+          <Flex sx={{ mx: -5 }}>
+            <Link
+              sx={{
+                '&:hover': {
+                  color: 'text'
+                },
+                '&:focus': {
+                  color: 'text'
+                }
+              }}
+              to="/"
+            >
+              <h2 sx={{ px: 5, fontSize: 2, letterSpacing: 1 }}>Home</h2>
             </Link>
-            <Link to="/about">
-              <h2 className="px-4 text-sm">About</h2>
+            <Link
+              sx={{
+                '&:hover': {
+                  color: 'text'
+                },
+                '&:focus': {
+                  color: 'text'
+                }
+              }}
+              to="/about"
+            >
+              <h2 sx={{ px: 5, fontSize: 2, letterSpacing: 1 }}>About</h2>
             </Link>
-            <Link to="/thoughts">
-              <h2 className="px-4 text-sm">Thoughts</h2>
+            <Link
+              sx={{
+                '&:hover': {
+                  color: 'text'
+                },
+                '&:focus': {
+                  color: 'text'
+                }
+              }}
+              to="/thoughts"
+            >
+              <h2 sx={{ px: 5, fontSize: 2, letterSpacing: 1 }}>Thoughts</h2>
             </Link>
-          </div>
+          </Flex>
         </Box>
-        <div className="px-4">
-          <IconButton onClick={openNavPanel} sx={{ cursor: 'pointer' }}>
+        <div sx={{ px: 5 }}>
+          <IconButton
+            onClick={openNavPanel}
+            sx={{
+              cursor: 'pointer',
+              '&:hover': {
+                color: 'text'
+              },
+              '&:focus': {
+                color: 'text'
+              }
+            }}
+          >
             <IoMdMenu size={ICON_SIZE} />
           </IconButton>
         </div>
       </nav>
       {showNavPanel && (
-        <Box
-          as={Dialog}
+        <Dialog
           sx={{
             position: 'absolute',
             width: '100%',
@@ -83,14 +130,13 @@ export const Nav = () => {
             right: 0,
             bottom: 0
           }}
-          // @ts-ignore Box generic typings not working
           onDismiss={closeNavPanel}
         >
           <SectionLayout sx={{ bg: NAV_PANEL_BACKGROUND_COLOR, height: '100vh' }}>
             <NavPanel onDismiss={closeNavPanel} />
           </SectionLayout>
-        </Box>
+        </Dialog>
       )}
-    </>
+    </_>
   );
 };

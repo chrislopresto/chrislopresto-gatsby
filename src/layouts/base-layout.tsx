@@ -5,6 +5,9 @@ import { SEO } from '../components/seo';
 import '../styles/core.css';
 import { store } from '../state/store';
 import { FontLoadDispatch } from '../components/font-load-dispatch';
+import { ThemeProvider } from 'theme-ui';
+import themeUiTheme from '../gatsby-plugin-theme-ui';
+import { BaseStyles } from '../components/base-styles';
 
 interface BaseLayoutProps {
   children: ReactNode;
@@ -14,15 +17,18 @@ interface BaseLayoutProps {
 export const BaseLayout = ({ children, layout: Layout }: BaseLayoutProps) => {
   return (
     <Provider store={store}>
-      {/*
+      <ThemeProvider theme={themeUiTheme}>
+        <BaseStyles />
+        {/*
         // @ts-ignore incorrect FontObserver children types */}
-      <FontObserver hero="Marvin Visions Big">
-        <FontLoadDispatch />
-        <Layout>
-          <SEO />
-          {children}
-        </Layout>
-      </FontObserver>
+        <FontObserver hero="Marvin Visions Big">
+          <FontLoadDispatch />
+          <Layout>
+            <SEO />
+            {children}
+          </Layout>
+        </FontObserver>
+      </ThemeProvider>
     </Provider>
   );
 };
