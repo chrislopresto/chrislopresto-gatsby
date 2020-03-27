@@ -20,22 +20,6 @@
   text-shadow: 3px 3px 0px rgba(255, 255, 255, 0.2);
 }
 
-.text-hero-treatment {
-  @apply font-medium uppercase tracking-normal text-6xl;
-  line-height: 0.85;
-}
-.font-hero-fallback {
-  @apply font-sans tracking-tighter;
-  font-size: 5.2rem;
-  line-height: 1;
-}
-.color-scheme-light .text-hero-treatment {
-  @apply text-shadow;
-}
-.color-scheme-dark .text-hero-treatment {
-  @apply text-shadow-light;
-}
-
 html {
   line-height: 1.15;
 }
@@ -43,7 +27,8 @@ body {
   @apply m-0 leading-snug;
 }
 h1 {
-  @apply font-hero font-bold text-6xl;
+  @apply font-hero font-bold text-6xl mb-2;
+  line-height: 0.85;
 }
 h2 {
   @apply font-hero tracking-wider font-bold text-2xl;
