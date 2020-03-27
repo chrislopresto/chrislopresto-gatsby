@@ -15,7 +15,7 @@ export default () => {
           <h1>
             Chris L<span className="text-5xl">o</span>Presto
           </h1>
-          <p className="-mt-3 text-sm">Engineering leader. Musician.</p>
+          <p className="text-sm">Engineering leader. Musician.</p>
         </section>
 
         <section className="mb-10">
