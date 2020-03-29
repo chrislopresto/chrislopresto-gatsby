@@ -14,9 +14,13 @@ export const BlogContentLayout = ({ children }: BlogContentLayoutProps) => {
   return (
     <MDXProvider
       components={{
-        h1: (props) => <Text as="h1" variant="title" sx={{ mb: 6 }} {...props} />,
-        h2: (props) => <Text as="h2" variant="subtitle" sx={{ mb: 2 }} {...props} />,
-        p: (props) => <Text as="p" variant="normal" sx={{ mb: 4 }} {...props} />,
+        h1: props => <Text as="h1" variant="title" sx={{ mb: 6 }} {...props} />,
+        h2: props => <Text as="h2" variant="subtitle" sx={{ mb: 3, mt: 6 }} {...props} />,
+        p: props => <Text as="p" variant="normal" sx={{ mb: 4, fontSize: 2 }} {...props} />,
+        img: props => (
+          // eslint-disable-next-line jsx-a11y/alt-text
+          <img sx={{ boxShadow: theme => `3px 3px 0px ${theme.colors.shadow}`, borderRadius: 4 }} {...props} />
+        )
       }}
     >
       <MainContentLayout>
