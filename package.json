@@ -9,10 +9,12 @@
     "prettier:check": "prettier \"{,!(node_modules)/}**/*.{ts,tsx,js,json,css}\" --check",
     "prettier:write": "prettier \"{,!(node_modules)/}**/*.{ts,tsx,js,json,css}\" --write",
     "develop": "gatsby develop",
+    "prebuild": "yarn storybook:build ; touch ./static/storybook/.gitkeep",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "test": "jest",
-    "storybook": "start-storybook"
+    "storybook": "start-storybook",
+    "storybook:build": "build-storybook -c .storybook -o ./static/storybook"
   },
   "dependencies": {
     "@reach/dialog": "^0.9.1",
