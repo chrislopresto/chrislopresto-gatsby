@@ -14,7 +14,7 @@ export const SectionLayout = ({ children, sx = {}, ...props }: SectionLayoutProp
 
   return (
     <Box as="section" sx={{ background, bg }} {...props}>
-      <Box sx={{ maxWidth: `${SECTION_LAYOUT_MAX_WIDTH}px`, mx: 'auto', px: [2, 3], ...contentSx }}>{children}</Box>
+      <Box sx={{ maxWidth: `${SECTION_LAYOUT_MAX_WIDTH}px`, mx: 'auto', px: [4, 5], ...contentSx }}>{children}</Box>
     </Box>
   );
 };

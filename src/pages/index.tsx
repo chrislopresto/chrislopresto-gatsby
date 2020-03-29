@@ -1,11 +1,13 @@
 /** @jsx jsx */
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
-import { jsx, Styled } from 'theme-ui';
+import { jsx, Styled, Text } from 'theme-ui';
 import { ICON_SIZE } from '../components/nav';
 import { SectionLayout } from '../components/section-layout';
 import { SEO } from '../components/seo';
 import { Signature } from '../components/signature';
 import { MainLayout } from '../layouts/main-layout';
+import { copyContainer } from '../gatsby-plugin-theme-ui';
+import underConstruction from '../images/under-construction.gif';
 
 export default () => {
   return (
@@ -17,6 +19,18 @@ export default () => {
             Chris L<span sx={{ fontSize: 6 }}>o</span>Presto
           </Styled.h1>
           <p sx={{ fontSize: 1 }}>Engineering leader. Musician.</p>
+        </section>
+
+        <section sx={{ mb: 7, ...copyContainer }}>
+          <Styled.h2>Hello</Styled.h2>
+          <Styled.p>
+            Thanks for stopping by. Back in the day, websites used to greet readers conversationally. In that spirit,
+            hello.
+          </Styled.p>
+          <Styled.p>
+            Also in that spirit, here's an ostensibly temporary indication that my site will soon have more content.
+          </Styled.p>
+          <img src={underConstruction} alt="This site is under construction" />
         </section>
 
         <section sx={{ mb: 7 }}>
@@ -50,9 +64,14 @@ export default () => {
           </Styled.a>
         </section>
 
+        <section sx={{ mb: 5 }}>
+          <Text as="p" variant="text.subtitle" sx={{ textTransform: 'uppercase' }}>
+            Don't panic
+          </Text>
+        </section>
+
         <section sx={{ mb: 7 }}>
-          <p sx={{ mb: 3, textTransform: 'uppercase' }}>Don't panic.</p>
-          <Signature sx={{ width: '5rem' }} description="Chris LoPresto signatures" />
+          <Signature sx={{ width: '10rem', ml: [-2, -3] }} description="Chris LoPresto signature" />
         </section>
       </SectionLayout>
     </MainLayout>
