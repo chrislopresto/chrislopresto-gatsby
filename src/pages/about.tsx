@@ -12,11 +12,11 @@ export default () => {
       <SectionLayout>
         <Styled.h1>About Chris</Styled.h1>
         <section sx={{ mb: 7, ...copyContainer }}>
-          <p sx={{ mb: 5 }}>
+          <Styled.p>
             Chris LoPresto grew up as an oldest child in Delaware, the oldest state. He picked up degrees in Jazz
             Performance (piano) and Computer Science at Exit 9 of the NJ Turnpike before continuing on up to New York
             City.
-          </p>
+          </Styled.p>
           <p sx={{ mb: 5 }}>
             Chris has performed at iconic venues<sup>*</sup> and dive bars
             <sup>**</sup> around the world

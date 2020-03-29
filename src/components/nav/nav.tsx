@@ -3,7 +3,7 @@ import { Dialog } from '@reach/dialog';
 import { Link } from '@reach/router';
 import React, { Fragment as _, useCallback } from 'react';
 import { IoMdMenu } from 'react-icons/io';
-import { Box, Flex, IconButton, jsx, useColorMode } from 'theme-ui';
+import { Box, Flex, IconButton, jsx, useColorMode, Text } from 'theme-ui';
 import { SectionLayout } from '../section-layout';
 import { getWidth, Signature } from '../signature';
 import { NavPanel, NAV_PANEL_BACKGROUND_COLOR, NAV_PANEL_VERTICAL_PADDING_INDEX } from './components';
@@ -31,7 +31,7 @@ export const Nav = () => {
           alignItems: 'center',
           mx: -5,
           py: NAV_PANEL_VERTICAL_PADDING_INDEX,
-          color: 'accent'
+          color: 'accent',
         }}
       >
         <div sx={{ px: 5 }}>
@@ -41,11 +41,11 @@ export const Nav = () => {
               cursor: 'pointer',
               flexBasis: `${SIGNATURE_WIDTH_PX}px`,
               '&:hover': {
-                color: 'text'
+                color: 'text',
               },
               '&:focus': {
-                color: 'text'
-              }
+                color: 'text',
+              },
             }}
             onClick={toggleColorMode}
             tabIndex={0}
@@ -54,7 +54,7 @@ export const Nav = () => {
               sx={{
                 height: `${SIGNATURE_HEIGHT_PX}px`,
                 width: `${SIGNATURE_WIDTH_PX}px`,
-                minWidth: `${SIGNATURE_WIDTH_PX}px`
+                minWidth: `${SIGNATURE_WIDTH_PX}px`,
               }}
             />
           </Box>
@@ -64,41 +64,47 @@ export const Nav = () => {
             <Link
               sx={{
                 '&:hover': {
-                  color: 'text'
+                  color: 'text',
                 },
                 '&:focus': {
-                  color: 'text'
-                }
+                  color: 'text',
+                },
               }}
               to="/"
             >
-              <h2 sx={{ px: 5, fontSize: 2, letterSpacing: 1 }}>Home</h2>
+              <Text variant="text.subtitle" sx={{ px: 5, fontSize: 2, letterSpacing: 1 }}>
+                Home
+              </Text>
             </Link>
             <Link
               sx={{
                 '&:hover': {
-                  color: 'text'
+                  color: 'text',
                 },
                 '&:focus': {
-                  color: 'text'
-                }
+                  color: 'text',
+                },
               }}
               to="/about"
             >
-              <h2 sx={{ px: 5, fontSize: 2, letterSpacing: 1 }}>About</h2>
+              <Text variant="text.subtitle" sx={{ px: 5, fontSize: 2, letterSpacing: 1 }}>
+                About
+              </Text>
             </Link>
             <Link
               sx={{
                 '&:hover': {
-                  color: 'text'
+                  color: 'text',
                 },
                 '&:focus': {
-                  color: 'text'
-                }
+                  color: 'text',
+                },
               }}
               to="/thoughts"
             >
-              <h2 sx={{ px: 5, fontSize: 2, letterSpacing: 1 }}>Thoughts</h2>
+              <Text variant="text.subtitle" sx={{ px: 5, fontSize: 2, letterSpacing: 1 }}>
+                Thoughts
+              </Text>
             </Link>
           </Flex>
         </Box>
@@ -108,11 +114,11 @@ export const Nav = () => {
             sx={{
               cursor: 'pointer',
               '&:hover': {
-                color: 'text'
+                color: 'text',
               },
               '&:focus': {
-                color: 'text'
-              }
+                color: 'text',
+              },
             }}
           >
             <IoMdMenu size={ICON_SIZE} />
@@ -128,7 +134,7 @@ export const Nav = () => {
             top: 0,
             left: 0,
             right: 0,
-            bottom: 0
+            bottom: 0,
           }}
           onDismiss={closeNavPanel}
         >

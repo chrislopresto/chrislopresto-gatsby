@@ -7,7 +7,6 @@ import { store } from '../state/store';
 import { FontLoadDispatch } from '../components/font-load-dispatch';
 import { ThemeProvider } from 'theme-ui';
 import themeUiTheme from '../gatsby-plugin-theme-ui';
-import { BaseStyles } from '../components/base-styles';
 
 interface BaseLayoutProps {
   children: ReactNode;
@@ -18,7 +17,6 @@ export const BaseLayout = ({ children, layout: Layout }: BaseLayoutProps) => {
   return (
     <Provider store={store}>
       <ThemeProvider theme={themeUiTheme}>
-        <BaseStyles />
         {/*
         // @ts-ignore incorrect FontObserver children types */}
         <FontObserver hero="Marvin Visions Big">

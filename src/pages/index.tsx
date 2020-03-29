@@ -13,14 +13,14 @@ export default () => {
       <SEO title="Chris LoPresto | Engineering leader. Musician." />
       <SectionLayout>
         <section sx={{ mb: 7 }}>
-          <Styled.h1>
+          <Styled.h1 sx={{ mb: 2 }}>
             Chris L<span sx={{ fontSize: 6 }}>o</span>Presto
           </Styled.h1>
           <p sx={{ fontSize: 1 }}>Engineering leader. Musician.</p>
         </section>
 
         <section sx={{ mb: 7 }}>
-          <h2 sx={{ mb: 3 }}>Say Hello</h2>
+          <Styled.h2 sx={{ mb: 3 }}>Say Hello</Styled.h2>
           <Styled.a
             href="https://twitter.com/chrislopresto"
             target="_blank"

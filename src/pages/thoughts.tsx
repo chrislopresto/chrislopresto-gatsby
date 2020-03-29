@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { Link } from 'gatsby';
-import { jsx } from 'theme-ui';
+import { jsx, Styled } from 'theme-ui';
 import { RevealJsSlideDeck } from '../components/reveal-js-slide-deck';
 import { SectionLayout } from '../components/section-layout';
 import { SEO } from '../components/seo';
@@ -11,11 +11,11 @@ export default () => {
     <MainLayout>
       <SEO title="Chris LoPresto | Thoughts" />
       <SectionLayout>
-        <h1 sx={{ mb: 6 }}>Thoughts</h1>
+        <Styled.h1>Thoughts</Styled.h1>
 
         <section sx={{ mb: 7 }}>
           <div sx={{ mb: 5 }}>
-            <h2>Talks</h2>
+            <Styled.h2>Talks</Styled.h2>
             <p>Here are some conference talks I have given.</p>
           </div>
           <div sx={{ mb: 6 }}>
