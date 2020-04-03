@@ -5,6 +5,7 @@ import { jsx, Text } from 'theme-ui';
 import { copyContainer } from '../../gatsby-plugin-theme-ui';
 import { MainContentLayout } from '../main-content-layout';
 import { SectionLayout } from '../section-layout';
+import { imageStyles } from '../../styles';
 
 interface BlogContentLayoutProps {
   children?: ReactNode;
@@ -19,7 +20,7 @@ export const BlogContentLayout = ({ children }: BlogContentLayoutProps) => {
         p: props => <Text as="p" variant="normal" sx={{ mb: 4, fontSize: 2 }} {...props} />,
         img: props => (
           // eslint-disable-next-line jsx-a11y/alt-text
-          <img sx={{ boxShadow: theme => `3px 3px 0px ${theme.colors.shadow}`, borderRadius: 4 }} {...props} />
+          <img sx={imageStyles} {...props} />
         )
       }}
     >

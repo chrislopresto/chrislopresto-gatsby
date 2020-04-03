@@ -5,9 +5,10 @@ import { ICON_SIZE } from '../components/nav';
 import { SectionLayout } from '../components/section-layout';
 import { SEO } from '../components/seo';
 import { Signature } from '../components/signature';
-import { MainLayout } from '../layouts/main-layout';
 import { copyContainer } from '../gatsby-plugin-theme-ui';
 import underConstruction from '../images/under-construction.gif';
+import { MainLayout } from '../layouts/main-layout';
+import { externalLinkProps } from '../utilities';
 
 export default () => {
   return (
@@ -35,28 +36,17 @@ export default () => {
 
         <section sx={{ mb: 7 }}>
           <Styled.h2 sx={{ mb: 3 }}>Say Hello</Styled.h2>
-          <Styled.a
-            href="https://twitter.com/chrislopresto"
-            target="_blank"
-            rel="noopener noreferrer"
-            sx={{ display: 'flex', mb: 2 }}
-          >
+          <Styled.a {...externalLinkProps} href="https://twitter.com/chrislopresto" sx={{ display: 'flex', mb: 2 }}>
             <FaTwitter size={ICON_SIZE} sx={{ mr: 3 }} />
             @chrislopresto
           </Styled.a>
-          <Styled.a
-            href="https://github.com/chrislopresto/"
-            target="_blank"
-            rel="noopener noreferrer"
-            sx={{ display: 'flex', mb: 2 }}
-          >
+          <Styled.a {...externalLinkProps} href="https://github.com/chrislopresto/" sx={{ display: 'flex', mb: 2 }}>
             <FaGithub size={ICON_SIZE} sx={{ mr: 3 }} />
             @chrislopresto
           </Styled.a>
           <Styled.a
+            {...externalLinkProps}
             href="https://www.linkedin.com/in/chrislopresto/"
-            target="_blank"
-            rel="noopener noreferrer"
             sx={{ display: 'flex', mb: 2 }}
           >
             <FaLinkedin size={ICON_SIZE} sx={{ mr: 3 }} />
