@@ -12,7 +12,7 @@ export const MainContentLayout = ({ children }: MainContentLayoutProps) => {
   return (
     <SiteLayout>
       <SiteLayout.Header>
-        <SectionLayout>
+        <SectionLayout sx={{ mb: 4 }}>
           <Nav />
         </SectionLayout>
       </SiteLayout.Header>
