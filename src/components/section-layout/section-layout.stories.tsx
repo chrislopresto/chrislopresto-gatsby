@@ -1,12 +1,12 @@
-import React from 'react';
+/** @jsx jsx */
+import { Box, jsx } from 'theme-ui';
 import { SectionLayout } from '.';
-import { Box } from 'theme-ui';
 
-export default { title: 'Section Layout' };
+export default { title: 'Layouts' };
 
-export const example = () => (
+export const section = () => (
   <Box>
-    <SectionLayout sx={{ background: 'cyan', border: 'dashed 1px magenta' }}>heyyyyyyyyyy</SectionLayout>
-    <SectionLayout>heyyyyyyyyyy yo</SectionLayout>
+    <SectionLayout sx={{ bg: 'accent' }}>I am content in a Section Layout</SectionLayout>
+    <SectionLayout>I am content in a Section Layout</SectionLayout>
   </Box>
 );

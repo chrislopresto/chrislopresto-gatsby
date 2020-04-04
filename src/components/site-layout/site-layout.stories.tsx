@@ -1,7 +1,7 @@
 import React from 'react';
 import { SiteLayout } from '.';
 
-export default { title: 'Site Layout' };
+export default { title: 'Layouts / Site' };
 
 export const example = () => (
   <SiteLayout>
