@@ -16,11 +16,11 @@ export default () => {
     <MainLayout>
       <SEO title="Chris LoPresto | Thoughts" />
       <SectionLayout>
-        <Styled.h1>Thoughts</Styled.h1>
+        <Styled.h1 sx={{ mb: 5 }}>Thoughts</Styled.h1>
 
         <section sx={{ mb: 7 }}>
           <div sx={{ mb: 5 }}>
-            <Styled.h2>Talks</Styled.h2>
+            <Styled.h2>Conference Talks</Styled.h2>
             <p>Here are some conference talks I have given.</p>
           </div>
           <div sx={{ mb: 6 }}>

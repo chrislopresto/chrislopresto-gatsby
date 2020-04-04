@@ -31,12 +31,12 @@ export const Nav = () => {
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
-          mx: -5,
+          mx: -4,
           py: NAV_PANEL_VERTICAL_PADDING_INDEX,
           color: 'accent'
         }}
       >
-        <div sx={{ px: 5 }}>
+        <div sx={{ px: 4 }}>
           <Box
             as="span"
             sx={{
@@ -61,7 +61,7 @@ export const Nav = () => {
             />
           </Box>
         </div>
-        <Box sx={{ px: 5, flexGrow: 1, display: ['none', 'block'] }}>
+        <Box sx={{ px: 4, flexGrow: 1, display: ['none', 'block'] }}>
           <Flex sx={{ mx: -5 }}>
             <Link {...activeLinkStyle} partiallyActive={false} to="/">
               <Text variant="text.subtitle" sx={{ px: 5, fontSize: 2, letterSpacing: 1 }}>
@@ -80,7 +80,7 @@ export const Nav = () => {
             </Link>
           </Flex>
         </Box>
-        <div sx={{ px: 5 }}>
+        <div sx={{ px: 4 }}>
           <IconButton
             onClick={openNavPanel}
             sx={{
