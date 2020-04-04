@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
-import { jsx, Styled, Text } from 'theme-ui';
+import { jsx, Link, Styled, Text } from 'theme-ui';
 import { ICON_SIZE } from '../components/nav';
 import { SectionLayout } from '../components/section-layout';
 import { SEO } from '../components/seo';
@@ -36,22 +36,33 @@ export default () => {
 
         <section sx={{ mb: 7 }}>
           <Styled.h2 sx={{ mb: 3 }}>Say Hello</Styled.h2>
-          <Styled.a {...externalLinkProps} href="https://twitter.com/chrislopresto" sx={{ display: 'flex', mb: 2 }}>
+          <Link
+            variant="accent"
+            {...externalLinkProps}
+            href="https://twitter.com/chrislopresto"
+            sx={{ display: 'flex', mb: 2 }}
+          >
             <FaTwitter size={ICON_SIZE} sx={{ mr: 3 }} />
             @chrislopresto
-          </Styled.a>
-          <Styled.a {...externalLinkProps} href="https://github.com/chrislopresto/" sx={{ display: 'flex', mb: 2 }}>
+          </Link>
+          <Link
+            variant="accent"
+            {...externalLinkProps}
+            href="https://github.com/chrislopresto/"
+            sx={{ display: 'flex', mb: 2 }}
+          >
             <FaGithub size={ICON_SIZE} sx={{ mr: 3 }} />
             @chrislopresto
-          </Styled.a>
-          <Styled.a
+          </Link>
+          <Link
+            variant="accent"
             {...externalLinkProps}
             href="https://www.linkedin.com/in/chrislopresto/"
             sx={{ display: 'flex', mb: 2 }}
           >
             <FaLinkedin size={ICON_SIZE} sx={{ mr: 3 }} />
             chrislopresto
-          </Styled.a>
+          </Link>
         </section>
 
         <section sx={{ mb: 5 }}>
