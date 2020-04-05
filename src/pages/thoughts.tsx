@@ -24,7 +24,7 @@ export default () => {
             <p>Here are some conference talks I have given.</p>
           </div>
           <div sx={{ mb: 6 }}>
-            <Link to="/presentations/hot-swapping-our-rails-front-end-in-secret" {...externalLinkProps}>
+            <Styled.a as={Link} to="/presentations/hot-swapping-our-rails-front-end-in-secret" {...externalLinkProps}>
               <p>Hot Swapping Our Rails Front End in Secret</p>
               <p sx={{ mb: 3, fontSize: 0, fontWeight: 'bold' }}>RailsConf 2018</p>
               <img
@@ -34,10 +34,10 @@ export default () => {
                 width={`${thumbnailWidthPx}px`}
                 height={`${thumbnailHeightPx}px`}
               />
-            </Link>
+            </Styled.a>
           </div>
           <div sx={{ mb: 6 }}>
-            <Link to="/presentations/living-style-guide-driven-development" {...externalLinkProps}>
+            <Styled.a as={Link} to="/presentations/living-style-guide-driven-development" {...externalLinkProps}>
               <p>Living Style Guide Driven Development</p>
               <p sx={{ mb: 3, fontSize: 0, fontWeight: 'bold' }}>EmberConf 2016</p>
               <img
@@ -47,7 +47,7 @@ export default () => {
                 width={`${thumbnailWidthPx}px`}
                 height={`${thumbnailHeightPx}px`}
               />
-            </Link>
+            </Styled.a>
           </div>
         </section>
       </SectionLayout>

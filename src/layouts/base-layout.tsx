@@ -1,12 +1,11 @@
 import React, { FC, ReactNode } from 'react';
 import { Provider } from 'react-redux';
 import { FontObserver } from 'react-with-async-fonts';
-import { SEO } from '../components/seo';
-import '../styles/core.css';
-import { store } from '../state/store';
-import { FontLoadDispatch } from '../components/font-load-dispatch';
 import { ThemeProvider } from 'theme-ui';
+import { FontLoadDispatch } from '../components/font-load-dispatch';
+import { SEO } from '../components/seo';
 import themeUiTheme from '../gatsby-plugin-theme-ui';
+import { store } from '../state/store';
 
 interface BaseLayoutProps {
   children: ReactNode;

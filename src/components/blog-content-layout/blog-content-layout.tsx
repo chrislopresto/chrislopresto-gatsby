@@ -27,7 +27,7 @@ export const BlogContentLayout = ({ children }: BlogContentLayoutProps) => {
     >
       <MainContentLayout>
         <SectionLayout>
-          <div sx={{ ...copyContainer }}>{children}</div>
+          <article sx={{ ...copyContainer }}>{children}</article>
         </SectionLayout>
       </MainContentLayout>
     </MDXProvider>
