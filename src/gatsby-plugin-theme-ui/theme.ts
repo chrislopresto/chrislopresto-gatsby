@@ -3,6 +3,7 @@ export const copyContainer = { maxWidth: COPY_CONTAINER_MAX_WIDTH };
 
 const space = [0, 1, 4, 8, 12, 16, 32, 40, 48];
 const colors = {
+  white: '#fff',
   modes: {
     default: {
       text: '#456173',
@@ -47,9 +48,24 @@ export const themeUiTheme = {
       textShadow: (theme: any) => `2px 2px 0px ${theme.colors.shadow}`,
       mb: 2
     },
+    header: {
+      fontFamily: 'sans',
+      fontSize: 2,
+      fontWeight: 700,
+      lineHeight: 1.2
+    },
+    subheader: {
+      fontFamily: 'sans',
+      fontSize: 0,
+      fontWeight: 300
+    },
     normal: {
       fontFamily: 'sans',
       fontSize: 2
+    },
+    dainty: {
+      fontFamily: 'sans',
+      fontSize: 1
     }
   },
   links: {
@@ -75,6 +91,15 @@ export const themeUiTheme = {
       '&:focus': {
         color: 'text'
       }
+    }
+  },
+  cards: {
+    primary: {
+      boxShadow: (theme: any) => `3px 3px 0px ${theme.colors.shadow}`,
+      border: (theme: any) => `solid 1px ${theme.colors.shadow}`,
+      borderRadius: 4,
+      bg: colors.white,
+      color: colors.modes.default.text
     }
   },
   styles: {
