@@ -3,7 +3,10 @@ import { Link } from 'gatsby';
 import { Box, Card, Grid, jsx, Styled } from 'theme-ui';
 import { SectionLayout } from '../../../components/section-layout';
 import { SEO } from '../../../components/seo';
+import emberConf2016Still from '../../../images/chris-lopresto-speaking-at-ember-conf-2016.jpg';
+import railsConf2018Still from '../../../images/chris-lopresto-speaking-at-rails-conf-2018.jpg';
 import { MainLayout } from '../../../layouts/main-layout';
+import { cardImageStyles } from '../../../styles';
 
 export default () => {
   return (
@@ -22,11 +25,7 @@ export default () => {
               to="/thoughts/conference-talks/hot-swapping-our-rails-front-end-in-secret"
             >
               <Card>
-                <img
-                  alt="Title slide for the RailsConf 2018 presentation Chris gave called Hot Swapping Our Rails Front End in Secret"
-                  src="http://get.chrislopresto.com.s3.amazonaws.com/betterment-rebranding-bonanza/0000.png"
-                  sx={{ mb: 2 }}
-                />
+                <img alt="Chris LoPresto speaking at RailsConf 2018" src={railsConf2018Still} sx={{ mb: 2, ...cardImageStyles }} />
                 <Box sx={{ p: 4, fontSize: 1 }}>
                   <h2 sx={{ variant: 'text.header' }}>Hot Swapping Our Rails Front End in Secret</h2>
                   <p sx={{ variant: 'text.subheader', mb: 3 }}>RailsConf 2018</p>
@@ -40,11 +39,7 @@ export default () => {
             </Link>
             <Link sx={{ variant: 'links.plain' }} to="/thoughts/conference-talks/living-style-guide-driven-development">
               <Card>
-                <img
-                  alt="Title slide for the EmberConf 2016 presentation Chris gave called Living Style Guide Driven Development"
-                  src="http://get.chrislopresto.com.s3.amazonaws.com/living-style-guide-driven-development/0000.png"
-                  sx={{ mb: 2 }}
-                />
+                <img alt="Chris LoPresto speaking at EmberConf 2016" src={emberConf2016Still} sx={{ mb: 2, ...cardImageStyles }} />
                 <Box sx={{ p: 4, fontSize: 1 }}>
                   <h2 sx={{ variant: 'text.header' }}>Living Style Guide Driven Development</h2>
                   <p sx={{ variant: 'text.subheader', mb: 3 }}>EmberConf 2016 </p>

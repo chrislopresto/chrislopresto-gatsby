@@ -98,7 +98,6 @@ export const themeUiTheme = {
   cards: {
     primary: {
       boxShadow: (theme: any) => `3px 3px 0px ${theme.colors.shadow}`,
-      border: (theme: any) => `solid 1px ${theme.colors.shadow}`,
       borderRadius: 4,
       bg: colors.white,
       color: colors.modes.default.text
