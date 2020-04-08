@@ -1,7 +1,7 @@
 import React from 'react';
-import { RevealJsSlideDeck } from '../../components/reveal-js-slide-deck';
-import { SEO } from '../../components/seo';
-import { ChromelessLayout } from '../../layouts/chromeless-layout';
+import { RevealJsSlideDeck } from '../../../../components/reveal-js-slide-deck';
+import { SEO } from '../../../../components/seo';
+import { ChromelessLayout } from '../../../../layouts/chromeless-layout';
 
 export default () => (
   <ChromelessLayout>

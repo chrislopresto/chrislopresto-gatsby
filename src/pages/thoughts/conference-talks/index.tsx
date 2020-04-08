@@ -1,20 +1,19 @@
 /** @jsx jsx */
 import { Link } from 'gatsby';
 import { Box, Card, Grid, jsx, Styled } from 'theme-ui';
-import { SectionLayout } from '../components/section-layout';
-import { SEO } from '../components/seo';
-import { MainLayout } from '../layouts/main-layout';
+import { SectionLayout } from '../../../components/section-layout';
+import { SEO } from '../../../components/seo';
+import { MainLayout } from '../../../layouts/main-layout';
 
 export default () => {
   return (
     <MainLayout>
-      <SEO title="Chris LoPresto | Thoughts" />
+      <SEO title="Chris LoPresto | Conference Talks" />
       <SectionLayout>
-        <Styled.h1 sx={{ mb: 5 }}>Thoughts</Styled.h1>
+        <Styled.h1 sx={{ mb: 5 }}>Conference Talks</Styled.h1>
 
         <section sx={{ mb: 7 }}>
           <div sx={{ mb: 5 }}>
-            <Styled.h2>Conference Talks</Styled.h2>
             <p>Here are some conference talks I have given.</p>
           </div>
           <Grid gap={[5, 4]} columns={[1, 2, 3]}>

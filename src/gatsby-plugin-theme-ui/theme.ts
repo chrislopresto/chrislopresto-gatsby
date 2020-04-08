@@ -1,5 +1,7 @@
 export const COPY_CONTAINER_MAX_WIDTH = '48rem';
+export const CONTENT_CONTAINER_MAX_WIDTH = '36rem';
 export const copyContainer = { maxWidth: COPY_CONTAINER_MAX_WIDTH };
+export const contentContainer = { maxWidth: CONTENT_CONTAINER_MAX_WIDTH };
 
 const space = [0, 1, 4, 8, 12, 16, 32, 40, 48];
 const colors = {
