@@ -26,7 +26,11 @@ export default () => {
               to="/thoughts/conference-talks/hot-swapping-our-rails-front-end-in-secret"
             >
               <Card>
-              <img alt="Chris LoPresto speaking at RailsConf 2018" src={railsConf2018Still} sx={{ mb: 2, ...cardImageStyles }} />
+                <img
+                  alt="Chris LoPresto speaking at RailsConf 2018"
+                  src={railsConf2018Still}
+                  sx={{ mb: 2, ...cardImageStyles }}
+                />
                 <Box sx={{ p: 4, fontSize: 1 }}>
                   <h2 sx={{ variant: 'text.header' }}>Hot Swapping Our Rails Front End in Secret</h2>
                   <p sx={{ variant: 'text.subheader', mb: 3 }}>RailsConf 2018</p>
@@ -40,7 +44,11 @@ export default () => {
             </Link>
             <Link sx={{ variant: 'links.plain' }} to="/thoughts/conference-talks/living-style-guide-driven-development">
               <Card>
-              <img alt="Chris LoPresto speaking at EmberConf 2016" src={emberConf2016Still} sx={{ mb: 2, ...cardImageStyles }} />
+                <img
+                  alt="Chris LoPresto speaking at EmberConf 2016"
+                  src={emberConf2016Still}
+                  sx={{ mb: 2, ...cardImageStyles }}
+                />
                 <Box sx={{ p: 4, fontSize: 1 }}>
                   <h2 sx={{ variant: 'text.header' }}>Living Style Guide Driven Development</h2>
                   <p sx={{ variant: 'text.subheader', mb: 3 }}>EmberConf 2016 </p>

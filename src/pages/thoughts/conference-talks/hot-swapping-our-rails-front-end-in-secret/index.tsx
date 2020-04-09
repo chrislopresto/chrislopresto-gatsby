@@ -59,7 +59,7 @@ export default () => {
               >
                 <img
                   alt="Title slide for the RailsConf 2018 presentation Chris gave called Hot Swapping Our Rails Front End in Secret"
-                  src="http://get.chrislopresto.com.s3.amazonaws.com/betterment-rebranding-bonanza/0000.png"
+                  src="https://get.chrislopresto.com/betterment-rebranding-bonanza/0000.png"
                   sx={{ ...imageStyles, mb: 2 }}
                 />
               </Link>

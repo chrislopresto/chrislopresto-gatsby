@@ -52,7 +52,7 @@ export default () => {
               >
                 <img
                   alt="Title slide for the EmberConf 2016 presentation Chris gave called Living Style Guide Driven Development"
-                  src="http://get.chrislopresto.com.s3.amazonaws.com/living-style-guide-driven-development/0000.png"
+                  src="https://get.chrislopresto.com/living-style-guide-driven-development/0000.png"
                   sx={{ ...imageStyles, mb: 2 }}
                 />
               </Link>
