@@ -36,8 +36,8 @@ export default () => {
           <section sx={{ mb: 7, ...copyContainer }}>
             <Styled.h2>Now</Styled.h2>
             <Styled.p sx={{ mb: 5 }}>
-              Chris is a software engineering leader and musician. He lives in New York City with his wife Louise
-              (pictured) and Boston Terrier Roland (surprisingly not pictured).
+              Chris is a software engineering leader and musician. He lives within striking distance of New York City
+              with his wife Louise (pictured), daughter Lark, and Boston Terrier Roland (surprisingly not pictured).
             </Styled.p>
             <Styled.h2>Then</Styled.h2>
             <Styled.p sx={{ mb: 5 }}>
@@ -54,7 +54,7 @@ export default () => {
             </Styled.p>
             <Styled.h2>Tech</Styled.h2>
             <Styled.p sx={{ mb: 5 }}>
-              Chris is an an engineering leader with experience building teams and inspiring change He has a track
+              Chris is an an engineering leader with experience building teams and inspiring change. He has a track
               record of accelerating product teams while leveling up tech teams. Over the course of his career, Chris
               has played with Patriot Missile System schematics, been CTO of a venture funded startup, given conference
               talks, and accrued several stories.
