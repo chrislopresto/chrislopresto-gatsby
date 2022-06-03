@@ -58,7 +58,7 @@
     "fork-ts-checker-webpack-plugin": "^3.1.1",
     "gatsby": "^2.18.21",
     "gatsby-plugin-eslint": "^2.0.8",
-    "gatsby-plugin-mdx": "^1.0.67",
+    "gatsby-plugin-mdx": "^2.14.1",
     "gatsby-plugin-page-creator": "^2.1.38",
     "gatsby-plugin-postcss": "^2.1.19",
     "gatsby-plugin-react-helmet": "^3.1.21",
